@@ -23,12 +23,13 @@ public class Monedero {
     
     public void sacarDinero(double dinero){
         
-        String error = (this.dinero -= dinero) < 0 ? "No hay saldo suficiente" : "Ha sacado " + dinero + " €";
-        this.dinero -= dinero;
+        String error = (this.dinero - dinero) < 0 ? "No hay saldo suficiente" : "Has sacado " + dinero + " euros";
+        this.dinero = (this.dinero - dinero) < 0 ? this.dinero : this.dinero - dinero;
+        System.out.println(error);
     }
     
     public void mostrarDinero(){
-        System.out.println("Tiene " + dinero + "€");
+        System.out.printf("Tiene %.2f euros\n",dinero);
     }
 
 }

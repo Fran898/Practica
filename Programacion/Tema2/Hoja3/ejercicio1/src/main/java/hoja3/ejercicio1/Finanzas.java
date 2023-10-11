@@ -12,11 +12,9 @@ public class Finanzas {
 
     private double toeuros;
     private double dinero;
-    
 
     public Finanzas() {
-        this.toeuros = 0.95;
-        
+        toeuros = 0.95;
 
     }
 
@@ -26,18 +24,17 @@ public class Finanzas {
 
     public double dolaresToEuros(double dinero) {
         return this.dinero = dinero * toeuros;
-        
+
     }
-    
-    public double eurosToDolares(double dinero){
-        return this.dinero = dinero/toeuros;
-        
+
+    public double eurosToDolares(double dinero) {
+        return this.dinero = dinero / toeuros;
+
     }
-    
-    public double getDinero(){
+
+    public double getDinero() {
         return dinero;
-      
+
     }
-    
 
 }

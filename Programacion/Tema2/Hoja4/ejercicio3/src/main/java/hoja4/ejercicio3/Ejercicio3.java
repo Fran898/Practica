@@ -17,6 +17,14 @@ public class Ejercicio3 {
         Monedero cuenta = new Monedero(20);
         
         cuenta.meterDinero(10.4);
-        cuentas.
+        cuenta.mostrarDinero();
+        
+        cuenta.sacarDinero(50);
+        cuenta.mostrarDinero();
+        
+        cuenta.sacarDinero(20);
+        cuenta.mostrarDinero();
+        
+        
     }
 }
