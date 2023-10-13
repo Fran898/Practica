@@ -16,7 +16,11 @@ public class Ejercicio1 {
         System.out.println(huevos.getHuevos());
         huevos.sirvePlato();
         System.out.println(huevos.getHuevos());
-
+        huevos.addHuevos(2);
+        huevos.addChorizo(3);
+        System.out.println("Puedo hacer " + huevos.getNumPlatos() + " de platos");
+        System.out.println("Hay " + huevos.getChorizo() + "kg de chorizo");
+        System.out.println("Hay " + huevos.getHuevos() + " huevos");
         
     }
 }

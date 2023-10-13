@@ -23,7 +23,7 @@ public class Restaurante {
 
     public void addHuevos(int docenas) {
         this.docenas += docenas;
-        huevos = (docenas * 12) + huevos;
+        huevos = ((docenas * 12) + huevos);
     }
 
     public void addChorizo(double chorizo) {
@@ -31,16 +31,16 @@ public class Restaurante {
     }
 
     public int getNumPlatos() {
-        huevos = huevos / 2;
+        
         int chori = (int) ((chorizo * 1000) / 200);
-        return chori + huevos;
+        return chori + (huevos/2);
 
     }
 
     public void sirvePlato() {
-        huevos = (docenas * 12-2);
+        huevos -= 2;
         docenas--;
-
+        chorizo -= 0.2;
     }
 
     public int getHuevos() {
