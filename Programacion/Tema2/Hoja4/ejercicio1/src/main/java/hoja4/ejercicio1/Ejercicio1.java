@@ -4,8 +4,7 @@
 
 package hoja4.ejercicio1;
 
-import java.util.HashSet;
-import java.util.Scanner;
+
 
 /**
  *
@@ -15,7 +14,6 @@ public class Ejercicio1 {
 
     public static void main(String[] args) {
         //Creacion de objetos
-        Scanner teclado = new Scanner(System.in);
         Circulo c1 = new Circulo();
         Circulo c2 = new Circulo(10f);
     
