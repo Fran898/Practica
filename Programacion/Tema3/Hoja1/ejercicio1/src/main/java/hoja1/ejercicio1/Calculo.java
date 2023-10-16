@@ -93,13 +93,13 @@ public class Calculo {
     public void par() {
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
-        
+
         if (num % 2 == 0) {
-            
+
             System.out.println("El numero " + num + " es par");
-            
+
         } else {
-            
+
             System.out.println("El numero " + num + " es impar");
         }
     }
@@ -107,51 +107,49 @@ public class Calculo {
     public void par2() {
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
-        
+
         if (num < 1 || num > 10) {
-            
+
             System.out.println("No entra en las opciones dadas");
-            
+
         } else if (num % 2 == 0) {
-            
-            System.out.println("El numero " + num + " es par");            
-            
+
+            System.out.println("El numero " + num + " es par");
+
         } else {
-            
+
             System.out.println("El numero " + num + " es impar");
-            
+
         }
     }
-    
-    public void maxMin(){
+
+    public void maxMin() {
         System.out.println("Inserte numero 1: ");
         double num1 = teclado.nextDouble();
         System.out.println("Inserte numero 2: ");
         double num2 = teclado.nextDouble();
         System.out.println("Inserte numero 3: ");
         double num3 = teclado.nextDouble();
-     
-        
+
         System.out.println("El menor numero es " + Math.min(Math.min(num1, num2), num3) + " y el mayor numero es " + Math.max(Math.max(num1, num2), num3));
-                                        
+
     }
-    
-    public void divisor(){
+
+    public void divisor() {
         System.out.println("Inserte numero 1 : ");
         double num1 = teclado.nextDouble();
         System.out.println("Inserte numero 2 (divisor): ");
         double num2 = teclado.nextDouble();
-        
-        if (num1%num2 == 0){
-            
+
+        if (num1 % num2 == 0) {
+
             System.out.println("El numero " + num2 + " es divisor de " + num1);
-            
-        }else{
-            
+
+        } else {
+
             System.out.println("los numeros no son divisores");
         }
-        
-        
+
     }
 
 }
