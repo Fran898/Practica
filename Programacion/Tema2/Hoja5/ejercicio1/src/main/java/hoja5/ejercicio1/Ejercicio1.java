@@ -11,16 +11,16 @@ package hoja5.ejercicio1;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        Restaurante huevos = new Restaurante(2,5);
+        Restaurante rest = new Restaurante(4,5);
         
-        System.out.println(huevos.getHuevos());
-        huevos.sirvePlato();
-        System.out.println(huevos.getHuevos());
-        huevos.addHuevos(2);
-        huevos.addChorizo(3);
-        System.out.println("Puedo hacer " + huevos.getNumPlatos() + " de platos");
-        System.out.println("Hay " + huevos.getChorizo() + "kg de chorizo");
-        System.out.println("Hay " + huevos.getHuevos() + " huevos");
+    
+        rest.sirvePlato();
+       
+        rest.addHuevos(2);
+        rest.addChorizo(3);
+        System.out.println("Puedo hacer " + rest.getNumPlatos() + " platos");
+        System.out.printf("Hay %,.2fkg de chorizo\n",rest.getChorizo());
+        System.out.println("Hay " + rest.getHuevos() + " huevos");
         
     }
 }

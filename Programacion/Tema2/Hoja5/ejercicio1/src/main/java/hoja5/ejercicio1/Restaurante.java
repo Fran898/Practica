@@ -10,20 +10,17 @@ package hoja5.ejercicio1;
  */
 public class Restaurante {
 
-    private int docenas;
     private int huevos;
     private double chorizo;
 
     public Restaurante(int docenas, double chorizo) {
-        this.docenas = docenas;
         this.chorizo = chorizo;
         huevos = docenas * 12;
 
     }
 
     public void addHuevos(int docenas) {
-        this.docenas += docenas;
-        huevos = ((docenas * 12) + huevos);
+        huevos = huevos + (docenas*12);
     }
 
     public void addChorizo(double chorizo) {
@@ -32,14 +29,13 @@ public class Restaurante {
 
     public int getNumPlatos() {
         
-        int chori = (int) ((chorizo * 1000) / 200);
-        return chori + (huevos/2);
+       int chori = (int)((chorizo * 1000) / 200);
+       return chori < (huevos/2) ? chori : (huevos/2);
 
     }
 
     public void sirvePlato() {
         huevos -= 2;
-        docenas--;
         chorizo -= 0.2;
     }
 
