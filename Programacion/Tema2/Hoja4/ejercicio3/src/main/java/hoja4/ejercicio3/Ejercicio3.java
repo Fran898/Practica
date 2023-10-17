@@ -15,15 +15,17 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         Monedero cuenta = new Monedero(20);
         
+        System.out.println("Creo mi monedero con 20 euros");
         cuenta.meterDinero(10.4);
-        cuenta.mostrarDinero();
-        
+        System.out.println("Le añado 10,4 euros");
+        System.out.printf("Tiene %,.2f euros\n",cuenta.getDinero());
+        System.out.println("Intento sacar 50 euros");
         cuenta.sacarDinero(50);
-        cuenta.mostrarDinero();
-        
+        System.out.printf("Tiene %,.2f euros\n",cuenta.getDinero());
+        System.out.println("Intento sacar 20 euros");
         cuenta.sacarDinero(20);
-        cuenta.mostrarDinero();
+        System.out.printf("Tiene %,.2f euros\n",cuenta.getDinero());
         
-        
+            
     }
 }
