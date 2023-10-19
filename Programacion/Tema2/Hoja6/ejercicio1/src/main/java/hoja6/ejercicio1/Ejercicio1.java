@@ -6,7 +6,7 @@ package hoja6.ejercicio1;
 
 /**
  *
- * @author dam1
+ * @author Francisco Sitjar
  */
 public class Ejercicio1 {
 
