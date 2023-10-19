@@ -13,6 +13,6 @@ public class Ejercicio5 {
     public static void main(String[] args) {
         String texto = "Buenos dias es entretenido";
         
-        System.out.println(texto.replaceAll("es", "no por"));
+        System.out.println(texto.replace("es", "no por"));
     }
 }

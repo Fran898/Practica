@@ -27,16 +27,17 @@ public class Restaurante {
         this.chorizo += chorizo;
     }
 
-    public int getNumPlatos() {
-        
-       int chori = (int)((chorizo * 1000) / 200);
-       return chori < (huevos/2) ? chori : (huevos/2);
+    public int getNumPlatos(){
+       
+       return (int)(chorizo/0.2) < (huevos/2) ? (int)(chorizo/0.2) : (huevos/2);
 
     }
 
     public void sirvePlato() {
-        huevos -= 2;
-        chorizo -= 0.2;
+        
+        
+        huevos -= getNumPlatos() > 0 ?  2 : huevos;
+        chorizo -= getNumPlatos() > 0 ?  0.2 : chorizo;
     }
 
     public int getHuevos() {
