@@ -13,8 +13,8 @@ public class Taller {
     //Declaracion de atributos
     private int aceite;//En litros
     private int ruedas;
-    private int contadorCambiosTotales;
-    private int contadorCambiosParciales;
+    private static int contadorCambiosTotales;
+    private static int contadorCambiosParciales;
 
     public Taller(int aceite, int ruedas) {
         this.aceite = aceite*5;
@@ -38,20 +38,20 @@ public class Taller {
 
     public int getCambioCompletos() {
 
-        return (ruedas / 4) < (aceite / 3) ? (ruedas / 4) : (aceite / 3);
+        return (ruedas/4) < (aceite/3) ? (ruedas/4) : (aceite/3);
     }
 
     public int getCambioParcial() {
 
-        return (ruedas / 2) < (aceite / 3) ? (ruedas / 2) : (aceite / 3);
+        return (ruedas/2) < (aceite/3) ? (ruedas/2) : (aceite/3);
     }
     
-    public int getNumCambiosTotales() {
+    public static int getNumCambiosTotales() {
         return contadorCambiosTotales;
 
     }
 
-    public int getNumCambiosParciales() {
+    public static int getNumCambiosParciales() {
         return contadorCambiosParciales;
         
     }
@@ -68,7 +68,7 @@ public class Taller {
 
         aceite -= getCambioCompletos() > 0 ? 3 : aceite;
         ruedas -= getCambioCompletos() > 0 ? 4 : ruedas;
-        contadorCambiosTotales++;
+        contadorCambiosTotales = getCambioCompletos() > 0 ? ++contadorCambiosTotales : contadorCambiosTotales;
 
     }
 
@@ -76,7 +76,7 @@ public class Taller {
 
         aceite -= getCambioParcial() > 0 ? 3 : aceite;
         ruedas -= getCambioParcial() > 0 ? 2 : ruedas;
-        contadorCambiosParciales++;
+        contadorCambiosParciales = getCambioParcial() > 0 ? ++contadorCambiosParciales : contadorCambiosParciales;
 
     }
 
@@ -84,8 +84,9 @@ public class Taller {
     @Override
     //String.builder
     public String toString (){
-        double total = (((3*4.5) + (50*4))*contadorCambiosTotales) + (((3*5) + (60*2))*contadorCambiosParciales);
-        return "TALLER\nEXISTENCIAS:\n \tRuedas: " + ruedas + " unidades.\n\tAceite: " + aceite + " litros.\nINGRESOS: Total: " + total + " €" ;
+        double total = (213.5*contadorCambiosTotales) + (135*contadorCambiosParciales);
+        String texto = "TALLER\nEXISTENCIAS:\n \tRuedas: " + ruedas + " unidades.\n\tAceite: " + aceite + " litros.\nINGRESOS: Total: " + String.format("%,.2f", total) + " €";
+        return texto;
         
     }
     

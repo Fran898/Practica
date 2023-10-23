@@ -49,8 +49,8 @@ public class Ejercicio1 {
         //Taller2
         System.out.println("Litros de aceite " + taller2.getAceite());
         System.out.println("Ruedas  " + taller2.getRuedas());
-        
-        
+        taller2.cambioParcial();
+        System.out.println(taller2.toString());
         
     }   
         

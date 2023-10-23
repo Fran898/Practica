@@ -23,7 +23,7 @@ public class Triangulo {
     
     
     public boolean esIsosceles(){
-        return (lado3 != lado1 && lado1 == lado2) || (lado2 != lado1 && lado1 == lado3);
+        return lado1==lado2 || lado1==lado3 || lado2==lado3;
     }
     
     public boolean esEquilatero(){

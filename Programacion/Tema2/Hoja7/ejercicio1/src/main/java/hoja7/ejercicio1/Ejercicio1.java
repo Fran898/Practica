@@ -22,7 +22,7 @@ public class Ejercicio1 {
         System.out.println("Ancho de rectangulo 2: " + rectangulo2.getLargo());
         System.out.println("Largo de rectangulo 2: " + rectangulo2.getAncho());
         System.out.println("Area del rectangulo 1: " + rectangulo1.area());
-        System.out.println("Diagonal del rectangulo 2: " + rectangulo2.diagonal());
+        System.out.printf("Diagonal del rectangulo 2: %,.2f ",rectangulo2.diagonal());
         
     }
 }
