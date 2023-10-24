@@ -44,10 +44,16 @@ public class Alimento {
     }
     
     
+    public String todo(){
+        return "Nombre: " + nombre + "\nGrasas: " + grasas + "\nHidratos: " + hidratos + "\nOrigen Animal: " + origenAnimal;
+    }
     
+    public boolean esDietetico(){
+        return grasas < 12 && origenAnimal == false;
+    }
     
-    
-    
-    
+    public double calorias(double alimentosg){
+        return alimentosg*(grasas*5.3 + hidratos*2.1);
+    }
     
 }

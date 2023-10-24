@@ -11,6 +11,12 @@ package hoja9.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Alimento comida = new Alimento("Fran",10,8,false);
+        
+        
+        System.out.println("Es dietetico: " + comida.esDietetico());
+        System.out.printf("Calorias: %.0f\n",comida.calorias(6));
+        System.out.println(comida.todo());
+        
     }
 }
