@@ -1,0 +1,43 @@
+section {
+    font-size: 20px;    
+    color: #e41f1f;
+}
+.azul{
+    color: rgba(0, 134, 11, 0.774);
+}
+#mitexto {
+    color: #ee067a;
+}
+
+section > p {
+    color: aqua;
+}
+
+main p {
+    font-size: 15px;
+
+}
+
+p ~ p {
+    color: rgb(255, 178, 12);
+    }
+
+h1 + p {
+    color: #fde721;
+}
+
+p {
+    font-size: 36px;
+    color: #1a039b
+    }
+p:nth-child(odd) { 
+    background-color: #999999;
+
+}
+
+p:nth-child(even) { 
+    background-color: #CCCCCC;
+
+}
+
+
