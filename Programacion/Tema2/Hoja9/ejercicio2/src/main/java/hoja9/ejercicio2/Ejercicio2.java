@@ -11,7 +11,7 @@ package hoja9.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        Alimento comida = new Alimento("Fran",10,8,false);
+        Alimento comida = new Alimento("platano",10,8,false);
         
         
         System.out.println("Es dietetico: " + comida.esDietetico());

@@ -49,7 +49,7 @@ public class Alimento {
     }
     
     public boolean esDietetico(){
-        return grasas < 12 && origenAnimal == false;
+        return grasas < 12 && !origenAnimal;
     }
     
     public double calorias(double alimentosg){

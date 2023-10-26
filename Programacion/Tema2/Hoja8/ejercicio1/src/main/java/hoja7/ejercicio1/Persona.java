@@ -34,7 +34,6 @@ public class Persona {
     public boolean dniValido(){
         String dniVal = "TRWAGMYFPDXBNJZSQVHLCKE";
         int num = Integer.parseInt(dni.substring(0,8))%23;
-        //int num2 = dni.length();
                 
         return dni.length() == 9 &&  dniVal.charAt((int)num) == dni.charAt(8); 
     }

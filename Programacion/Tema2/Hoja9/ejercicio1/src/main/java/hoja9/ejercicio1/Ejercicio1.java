@@ -14,7 +14,6 @@ public class Ejercicio1 {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        Timbre TIMBRE;
         //Seleccionamos la temperatura
         System.out.println("Seleccione la temperatura del lugar: ");
         double temp = teclado.nextDouble();
@@ -23,11 +22,10 @@ public class Ejercicio1 {
         Alarma alarma = new Alarma(temp);
         
         alarma.comprueba();
-        TIMBRE = alarma.getTimbre();
         
         System.out.println("El timbre esta " + alarma.getTimbre());
         
-        if(TIMBRE.equals(Timbre.ENCENDIDO)){
+        if(alarma.getTimbre().equals(Timbre.ENCENDIDO)){
             alarma.normaliza();
             System.out.println("Se ha normalizado la temperatura");
         }
