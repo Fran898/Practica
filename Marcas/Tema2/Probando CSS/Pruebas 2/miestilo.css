@@ -1,0 +1,39 @@
+#titulo {
+    font: bold 26px Verdana, sans-serif;
+    text-decoration: wavy;
+    text-align: center;
+}
+
+header {
+    margin: 30px;
+    padding: 15px;
+    }
+#descripcion { 
+    width: 200px; 
+    height:100px; 
+    overflow: hidden ; 
+    margin: 30px;
+    padding: 15px;
+
+}
+html{
+    background-image: url("https://imagenes.20minutos.es/uploads/imagenes/2020/06/19/rick-astley-en-su-cancion-never-gonna-give-you-up.gif");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(153, 102,52 );
+    border-color: rgb(228, 6, 128);
+    border-style: groove;
+    border-width: 8px;
+    border-radius: 10px 8px 10px 50%;
+    outline-style: dotted;
+    outline-color: rgb(18, 151, 0);
+}
+
+@font-face {
+    font-family: "MiFuente";
+    src: url("font2.ttf");
+}
