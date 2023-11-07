@@ -12,13 +12,14 @@ import java.util.Scanner;
  */
 public class Calculo {
 
-    Scanner teclado = new Scanner(System.in);
-
+    
     public Calculo() {
 
     }
 
     public void cienyMil() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
         if (num > 100 && num < 1000) {
@@ -31,6 +32,8 @@ public class Calculo {
     }
 
     public void posOno() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
 
@@ -49,16 +52,22 @@ public class Calculo {
     }
 
     public void div25() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
 
         if (num % 2 == 0 && num % 5 == 0) {
             System.out.println("El numero " + num + " es divisible entre 2 y 5 a la vez");
 
+        }else{
+            System.out.println("El numero" + num + " no es divisible entre 2 y 5 a la vez");
         }
     }
 
     public void frac() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
 
@@ -74,6 +83,8 @@ public class Calculo {
     }
 
     public void bisi() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte un año entre 1900 y 2100: ");
         double num = teclado.nextDouble();
 
@@ -91,6 +102,8 @@ public class Calculo {
     }
 
     public void par() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
 
@@ -105,6 +118,8 @@ public class Calculo {
     }
 
     public void par2() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
 
@@ -124,6 +139,8 @@ public class Calculo {
     }
 
     public void maxMin() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte numero 1: ");
         double num1 = teclado.nextDouble();
         System.out.println("Inserte numero 2: ");
@@ -136,6 +153,8 @@ public class Calculo {
     }
 
     public void divisor() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("Inserte numero 1 : ");
         double num1 = teclado.nextDouble();
         System.out.println("Inserte numero 2 (divisor): ");

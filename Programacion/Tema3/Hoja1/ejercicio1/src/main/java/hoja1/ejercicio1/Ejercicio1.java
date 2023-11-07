@@ -7,7 +7,7 @@ package hoja1.ejercicio1;
 
 /**
  *
- * @author haloc
+ * @author Francisco Sitjar
  */
 public class Ejercicio1 {
 
