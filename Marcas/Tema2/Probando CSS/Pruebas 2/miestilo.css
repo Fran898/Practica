@@ -8,6 +8,22 @@ header {
     margin: 30px;
     padding: 15px;
     }
+
+header { margin: 30px;
+        
+    padding: 15px; text-align: center; 
+    border: 1px solid;
+    box-shadow: rgb(6, 204, 49) 5px 5px 4px 10px;
+    text-shadow: rgb(150, 12, 12) 5px 10px 5px;
+    background: -webkit-linear-gradient(top, #56af03 50%, #7309b1 90%);
+    filter: blur(2px);
+    }
+
+ body {
+      perspective: 500px;
+      perspective-origin: 50% 90%;
+     }
+
 #descripcion { 
     width: 200px; 
     height:100px; 
@@ -17,9 +33,11 @@ header {
 
 }
 html{
-    background-image: url("https://imagenes.20minutos.es/uploads/imagenes/2020/06/19/rick-astley-en-su-cancion-never-gonna-give-you-up.gif");
+    background-image : url("https://imagenes.20minutos.es/uploads/imagenes/2020/06/19/rick-astley-en-su-cancion-never-gonna-give-you-up.gif");
     background-repeat: repeat-y;
     background-size: cover;
+    filter:brightness(100%);
+    
 }
 
 a {
@@ -32,7 +50,50 @@ a {
     outline-style: dotted;
     outline-color: rgb(18, 151, 0);
 }
+#michael{
+    transform: translateX(600px);
+}
 
+#michael:hover{
+    animation: mianimacion 1s linear 0s infinite normal none;
+   
+    
+}
+
+@keyframes mianimacion {
+    0%    {
+        transform:skew(0deg) translateX(600px) rotate(-20deg);
+    }
+    10%{
+        transform:skew(10deg) translateX(600px) rotate(-20deg)
+    }
+    20%{
+        transform:skew(20deg) translateX(600px) rotate(-20deg);
+    
+    }
+    40%  {
+        transform:skew(40deg) translateX(600px) rotate(-20deg);
+    }
+    60% {
+        transform:skew(20deg) translateX(600px) rotate(-20deg);
+    }
+    80%{
+        transform:skew(10deg) translateX(600px) rotate(-20deg);
+    }
+    100%{
+        transform:skew(0deg) translateX(600px) rotate(-20deg);
+    }
+    
+}
+
+#rick:hover {
+    transform: scaleX(-1) ;
+    
+
+}
+div:hover{
+    transform: translate(200px, 200px);
+}
 @font-face {
     font-family: "MiFuente";
     src: url("font2.ttf");
