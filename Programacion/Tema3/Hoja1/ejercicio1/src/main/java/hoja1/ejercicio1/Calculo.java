@@ -11,18 +11,17 @@ import java.util.Scanner;
  * @author Francisco Sitjar
  */
 public class Calculo {
-
+    private Scanner teclado;
     
     public Calculo() {
 
     }
 
     public void cienyMil() {
-        Scanner teclado = new Scanner(System.in);
-
+        teclado = new Scanner(System.in);
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
-        if (num > 100 && num < 1000) {
+        if (num >= 100 && num <= 1000) {
             System.out.println("El numero " + num + " esta entre 100 y 1.000");
 
         } else {
@@ -32,7 +31,7 @@ public class Calculo {
     }
 
     public void posOno() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
@@ -52,7 +51,7 @@ public class Calculo {
     }
 
     public void div25() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
@@ -66,12 +65,12 @@ public class Calculo {
     }
 
     public void frac() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
 
-        if (num / (int) num == 1) {
+        if (num == (int)num) {
 
             System.out.println("El numero es entero");
 
@@ -83,7 +82,7 @@ public class Calculo {
     }
 
     public void bisi() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte un año entre 1900 y 2100: ");
         double num = teclado.nextDouble();
@@ -102,7 +101,7 @@ public class Calculo {
     }
 
     public void par() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
@@ -118,7 +117,7 @@ public class Calculo {
     }
 
     public void par2() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte un numero: ");
         double num = teclado.nextDouble();
@@ -139,7 +138,7 @@ public class Calculo {
     }
 
     public void maxMin() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte numero 1: ");
         double num1 = teclado.nextDouble();
@@ -148,12 +147,34 @@ public class Calculo {
         System.out.println("Inserte numero 3: ");
         double num3 = teclado.nextDouble();
 
-        System.out.println("El menor numero es " + Math.min(Math.min(num1, num2), num3) + " y el mayor numero es " + Math.max(Math.max(num1, num2), num3));
+        //System.out.println("El menor numero es " + Math.min(Math.min(num1, num2), num3) + " y el mayor numero es " + Math.max(Math.max(num1, num2), num3));
 
+        if (num1 < num2){
+            if (num2 < num3){
+                System.out.printf("%f, %f, %f", num1, num2, num3);
+                
+            }else{
+                System.out.printf("%f, %f, %f", num1, num3, num2);
+            }
+        }else if(num2 < num1){
+            if(num1 < num3){
+                System.out.printf("%f, %f, %f", num2, num1, num3);
+            }else{
+                System.out.printf("%f, %f, %f", num2, num3, num1);
+            }
+        }else if(num3 < num1){
+            if(num1 < num2){
+                System.out.printf("%f, %f, %f", num3, num1, num2);
+            }else{
+                System.out.printf("%f, %f, %f", num3, num2, num1);
+            }
+        }
+        
+        
     }
 
     public void divisor() {
-        Scanner teclado = new Scanner(System.in);
+        teclado = new Scanner(System.in);
 
         System.out.println("Inserte numero 1 : ");
         double num1 = teclado.nextDouble();
