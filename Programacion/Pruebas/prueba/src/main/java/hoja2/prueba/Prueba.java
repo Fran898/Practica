@@ -10,15 +10,18 @@ package hoja2.prueba;
 public class Prueba {
 
     public static void main(String[] args) {
-        boolean salir = false;
+        final int N = 200;
+        final int M = 400;
 
-        int n;
-        int i = 0;
-        while (salir == false && i <= 5) {
-            n = (int) Math.floor(Math.random() * 499 + 1);
-            System.out.println(n);
-            salir = (n % 7 == 0);
-            i++;
-        }
+        int x = (int) Math.floor(Math.random() * N);
+// x será un número entre 0 y N-1
+        int y = (int) Math.floor(Math.random() * N) + 1;
+// x será un número entre 1 y N
+        int z = (int) Math.floor(Math.random() * (M - N + 1)) + N;
+        
+//x será un número entre M y N ambos incluidos y siendo M mayor que N
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(z);
     }
 }
