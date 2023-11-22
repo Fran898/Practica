@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    text-align: center;
+ 
+}
+header img{
+    width: 1000px;
+}
+
+html h1{
+    text-align: center;
+}
+html {
+    background-image: url("https://cdn.wallpapersafari.com/13/35/NbMw8f.jpg");
+    background-size: cover;
+}
+
+#menuprincipal h2{
+    text-align: center;
+}
+
+#menuprincipal {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    height: 50px;
+    padding: 0% 2%;
+    background-color: #9FC8D9;
+    border-top: 1px solid #094660;
+    border-bottom: 1px solid #094660;
+}
+#menuprincipal > div {
+    flex: 1;
+    max-width: 960px;
+}
+#menuprincipal li {
+    display: inline-block;
+    height: 35px;
+    padding: 15px 10px 0px 10px;
+    margin-right: 5px;
+}
+#menuprincipal li:hover {
+    background-color: #6FACC6;
+}
+#menuprincipal a {
+    font: bold 20px Arial, sans-serif;
+    color: #333333;
+    text-decoration: none;
+}
+
+#tabla{
+    
+    padding-left: 400px;
+}
