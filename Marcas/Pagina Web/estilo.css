@@ -10,9 +10,7 @@ header img{
     width: 1000px;
 }
 
-html h1{
-    text-align: center;
-}
+
 html {
     background-image: url("https://cdn.wallpapersafari.com/13/35/NbMw8f.jpg");
     background-size: cover;
@@ -52,6 +50,16 @@ html {
 }
 
 #tabla{
+    padding: 15px 500px;
     
-    padding-left: 400px;
+}
+article h1{
+    text-align: center;
+}
+
+#introduccion {
+    border-color: rgb(233, 226, 226);
+    border-style: groove;
+    border-width: 8px;
+    border-radius: 10px 10px 10px 50%;
 }
