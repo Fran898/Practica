@@ -46,7 +46,7 @@ public class Menu {
             }
 
         }
-        System.out.println(total);
+        System.out.println("La suma total de los numeros es: " + total);
     }
 
     public static void metodo3() {
@@ -73,7 +73,7 @@ public class Menu {
         for (; num1 != 0 || num1 != 1; ) {
 
             num1 -= num2;
-
+            
         }
         System.out.println(num1);
     }

@@ -13,8 +13,8 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         //Menu.metodo1();
         //Menu.metodo2();
-        //Menu.metodo3();
-        Menu.metodo4();
+       // Menu.metodo3();
+        //Menu.metodo4();
         
         
         
