@@ -17,7 +17,7 @@
             <link rel="stylesheet" href="estilo.css">
         </header>
 
-       <div id="menuprincipal">
+       <nav id="menuprincipal">
             <ul>
                 <li><a href="main.html">Inicio </a> </li>
                 <li><a href="registro.html">Registro </a> </li>
@@ -25,126 +25,112 @@
                 <li><a href="galeria de imagenes.html">Galeria de imagenes </a> </li>
                 <li> <a href="contacto.html">Concato </a> </li>
             </ul>                        
-       </div>
+        </nav>
     
        <br>
+        <div id="cajapadre">
+            <section id="infomain" >
+            <article id="introduccion">
+                <p>
+                    <h3>La verdad de nuestro "planeta"</h3>
+                    Con esta página web podras aprender la verdad respecto al planeta Tierra,
+                    nuestro "planeta" es <b>plano</b> y aqui tendras todas las pruebas que lo demuestran asi 
+                    como información sobre donde encontrarnos para reunirte con más personas que, tras tantas mentiras,
+                    han abierto los ojos a las grandes verdades.      
+                </p>
 
-       <section>
-        <article>
-            <p>
-                <h3  id="introduccion">La verdad de nuestro "planeta"</h3>
-                Con esta página web podras aprender la verdad respecto al planeta Tierra,
-                nuestro "planeta" es <b>plano</b> y aqui tendras todas las pruebas que lo demuestran asi 
-                como información sobre donde encontrarnos para reunirte con más personas que, tras tantas mentiras,
-                han abierto los ojos a las grandes verdades.      
-            </p>
+            </article>
 
-        </article>
-
-        <br>
+            <br>
        
-        <article id="tabla">
+            <article id="tabla">
 
-            <table border ="1" ><h1>Información básica</h1>
-                <tr>
-                    <th>Horizonte</th>                        
-                    <th colspan="2">El muro de Hielo</th>
-                    <th>Gravedad</th>
-                </tr>
-                <tr>
-                    <td>No hay curvatura</td>
-                    <td>Video del muro</td>
-                    <td>Imagen</td>
-                    <td>Aceleración Universal</td>
-
-
-                </tr>
-                <tr>
-                    <td><img src="images/horizonte.jpg" width="200px" height="200ps"></td>
-                    <td><video src="videos/Ice_Wall_Plane.mp4" controls autoplay width="200px" height="200ps"></video></td>
-                    <td><img src="images/Ice Wall.jpg" width="200px" height="200ps"></td>
-                    <td><img src="images/Aceleracion Universal.jpg"></td>
-                </tr>
+                <table border ="1" ><h1>Información básica</h1>
+                    <tr>
+                        <th>Horizonte</th>                        
+                        <th colspan="2">El muro de Hielo</th>
+                        <th>Gravedad</th>
+                    </tr>
+                    <tr>
+                        <td>No hay curvatura</td>
+                        <td>Video del muro</td>
+                        <td>Imagen</td>
+                        <td>Aceleración Universal</td>
 
 
-            </table>
+                    </tr>
+                    <tr>
+                        <td><img src="images/horizonte.jpg" width="200px" height="200ps"></td>
+                        <td><video src="videos/Ice_Wall_Plane.mp4" controls autoplay width="200px" height="200ps"></video></td>
+                        <td><img src="images/Ice Wall.jpg" width="200px" height="200ps"></td>
+                        <td><img src="images/Aceleracion Universal.jpg"></td>
+                    </tr>
 
+
+                </table>
+
+
+
+            </article>
+
+            <br>
+
+            <article><h1>Sobre ti</h1>      
+                <form>              
+                    <p>Sexo:</p>
+                    <input type="radio" name="sexo" id="hombre" value="h">
+                    <label for="hombre">Hombre</label><br>
+                    <input type="radio" name="sexo" id="mujer" value="m" checked>
+                    <label for="mujer">Mujer</label><br>
+                    <p>Como nos has conocido:</p>
+                    <input type="checkbox" name="twitter" id="twitter" value="twitter">
+                    <label for="twitter">Twitter</label><br>
+                    <input type="checkbox" name="facebook" id="facebook" value="facebook">
+                    <label for="facebook">Facebook</label><br>
+                    <input type="checkbox" name="amigos" id="amigos" value="amigos">
+                    <label for="amigos">Amigos</label><br>
+                    <br>
+                    <label for="fecha_nac">Fechas de nacimiento</label>
+                    <input type="date" name="fecha_nac" id="fechanac"><br>
+
+
+                    <pre><input type="reset" value="Borrar">         <input type="submit" value="Enviar"></pre><br>
+
+                </form>
 
             
-        </article>
-
-        <br>
-
-        <article>
-            <form>                    
-                <p><h1>Sobre ti</h1>Sexo:</p>
-                <input type="radio" name="sexo" id="hombre" value="h">
-                <label for="hombre">Hombre</label><br>
-                <input type="radio" name="sexo" id="mujer" value="m" checked>
-                <label for="mujer">Mujer</label><br>
-                <p>Como nos has conocido:</p>
-                <input type="checkbox" name="twitter" id="twitter" value="twitter">
-                <label for="twitter">Twitter</label><br>
-                <input type="checkbox" name="facebook" id="facebook" value="facebook">
-                <label for="facebook">Facebook</label><br>
-                <input type="checkbox" name="amigos" id="amigos" value="amigos">
-                <label for="amigos">Amigos</label><br>
-                <br>
-                <label for="fecha_nac">Fechas de nacimiento</label>
-                <input type="date" name="fecha_nac" id="fechanac"><br>
-
-
-                <pre><input type="reset" value="Borrar">         <input type="submit" value="Enviar"></pre><br>
-
-            </form>
-
-            
-        </article>
+            </article>
 
 
 
-    </section>
-    <aside>
-        <ul><h3>Enlaces de interes</h3>
-            <li><a href="https://theflatearthsociety.org/home/"> Sociedad Terraplanista</a></li>
-            <li><a href="https://theflatearthsociety.org/tiki/tiki-index.php">Wiki de la Sociedad Terraplanista</a></li>
-            <li><a href="https://theflatearthsociety.org/forum/index.php?topic=1324.0">FAQ</a></li>
-            <li><a href="https://es.wikipedia.org/wiki/Experimento_de_Bedford_Level">Experimento Bedford Level</a></li>
-            <li><a href="https://community.oneplus.com/thread/749653">Australia no existe</a></li>
-            <li><a href="https://wiki.tfes.org/The_Ice_Wall">Muros de hielo, "Antartida"</a></li>
-            <li><a href="https://wiki.tfes.org/Evidence_for_Universal_Acceleration">"Universal Acceleration"</a></li>
-            <li><a href="https://es.wikipedia.org/wiki/Falacia">Falacia logica, el porque creen que la Tierra es redonda</a></li>
-            <li><a href="https://www.tfes.org/">Flat Earth Society</a></li>
-            <li><a href="https://twitter.com/FlatEarthOrg">Twitter</a></li>
-        </ul>
+            </section>
+            <aside id="infoextra">
+                <ul><h3>Enlaces de interes</h3>
+                    <li><a href="https://theflatearthsociety.org/home/"> Sociedad Terraplanista</a></li>
+                    <li><a href="https://theflatearthsociety.org/tiki/tiki-index.php">Wiki de la Sociedad Terraplanista</a></li>
+                    <li><a href="https://theflatearthsociety.org/forum/index.php?topic=1324.0">FAQ</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Experimento_de_Bedford_Level">Experimento Bedford Level</a></li>
+                    <li><a href="https://community.oneplus.com/thread/749653">Australia no existe</a></li>
+                    <li><a href="https://wiki.tfes.org/The_Ice_Wall">Muros de hielo, "Antartida"</a></li>
+                    <li><a href="https://wiki.tfes.org/Evidence_for_Universal_Acceleration">"Universal Acceleration"</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Falacia">Falacia logica, el porque creen que la Tierra es redonda</a></li>
+                    <li><a href="https://www.tfes.org/">Flat Earth Society</a></li>
+                    <li><a href="https://twitter.com/FlatEarthOrg">Twitter</a></li>
+                </ul>
        
-    </aside>
-
-    <footer>
-        <pre>
-            Creado por Francisco Sitjar &copy;     <a href="#top">Inico de página</a>             <img src="images/Flat_Earth_Society_Logo.jpg" width="50px" height="50px">         
+            </aside>
+        </div>
+        <footer>
+            <pre>
+             Creado por Francisco Sitjar &copy;     <a href="#top">Inico de página</a>             <img src="images/Flat_Earth_Society_Logo.jpg" width="50px" height="50px">         
                                                                                                                           
             
-        </pre>
-    </footer>
-    
-
-
-
-
-
-
+            </pre>
+        </footer>
+  
 
 
     </body>
-
-
-
-
-
-
-
-
 
 
 </html>

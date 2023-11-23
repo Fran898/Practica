@@ -56,10 +56,59 @@ html {
 article h1{
     text-align: center;
 }
+h3{
+    text-align: center;
+}
 
 #introduccion {
+    flex: 1 1 600px;
     border-color: rgb(233, 226, 226);
-    border-style: groove;
+    border-style:double;
     border-width: 8px;
-    border-radius: 10px 10px 10px 50%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(233, 226, 226);
+}
+
+form{
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-bottom: 30px;
+    border-color: rgb(56, 56, 56);
+    border-style:groove;
+    
+}
+
+input{
+    margin-bottom: 30px;
+}
+
+#infoextra{
+    width: 280px;
+    padding: 20px;
+    background-color: #E7F1F5;
+    border-radius: 10px;
+    
+    
+}
+
+
+footer{
+    text-align: center;
+    background-color: rgba(53, 173, 243, 0.637);
+    
+}
+
+footer img{
+    text-align: right;
+    margin-top: 10px;
+}
+
+#cajapadre{
+    display: flex;
+
+    
+}
+#infomain{
+    width: 80%;
 }

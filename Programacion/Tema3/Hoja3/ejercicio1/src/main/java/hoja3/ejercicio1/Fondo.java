@@ -26,7 +26,7 @@ public class Fondo {
     public void evolucion(){
         int i = 1;
         
-        while (i < N){
+        while (i <= N){
             
              System.out.printf("En el año %d hay %,.2f euros\n",i, (C + (C*I/100*i)));
              i++;

@@ -20,7 +20,7 @@ public class Calculo {
 
     public static void metodo1() {
         int i = 10;
-        while (i > 0) {
+        while (i >= 0) {
             System.out.println(i);
             i--;
         }
@@ -39,7 +39,7 @@ public class Calculo {
                 nul++;
             } else if (num < 0) {
                 neg++;
-            } else if (num > 0) {
+            } else {
                 pos++;
             }
             i++;
@@ -57,7 +57,7 @@ public class Calculo {
             factorial = (factorial * (num - 1));
             num--;
 
-        } while (num != 1);
+        } while (num >= 1);
 
         System.out.println(factorial);
     }
