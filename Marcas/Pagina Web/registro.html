@@ -5,12 +5,12 @@
         <meta charset="UTF-8">
         
         <title>Terraplanismo:Registro</title>
-
+         <link rel="stylesheet" href="estilo.css">
     </head>
     <body>
         <header>
             <h1>Terraplanismo</h1><br>
-            <p><b>Aqui podras aprender la verdad, recibir pruebas veridicas y autenticas confirmadas por expertos respecto a la realidad de nuestro planeta</b></p>           
+            <p><b>Aqui podras aprender la verdad, recibir pruebas veridicas y autenticas confirmadas por expertos respecto a la realidad de nuestro planeta</b></p><br>           
             <img src="images/cabecera.jpg" alt="Planeta Tierra" width="500" height="400">
        
         </header>
@@ -25,10 +25,10 @@
        </div>
 
 
-           <form>
+           <form id="registro">
                 <table border="5"><h2>Registrate y ayudanos a esparcir la verdad</h2>
                     <tr>
-                        <td><label for="name">Nombre</label></td>
+                        <td><label for="name" class="labeltext  ">Nombre</label></td>
                         <td><input type="text" name="nombre" id="nombre"></td>
                     </tr>
                     <tr>
@@ -64,8 +64,8 @@
                     <td><textarea rows="10" cols="20" name="texto" autofocus></textarea></td>
                     </tr>
                     <tr>    
-                        <td>Enviar: <button><img src="images/enviar.jpg" width="40" height="40"></button></td>
-                        <td>Borrar: <button><img src="images/boton.png" width="40" height="40"></button></td>                    
+                        <td><button class="center"><img src="images/enviar.jpg" width="40" height="30"></button></td>
+                        <td><button class="center"><img src="images/boton.png" width="60" height="40"></button></td>                    
                     </tr>
                 </table>
 

@@ -50,9 +50,15 @@ html {
 }
 
 #tabla{
-    padding: 15px 500px;
+    padding: 15px 300px;
     
 }
+
+#contenido{
+    align-content: stretch;
+
+}
+
 article h1{
     text-align: center;
 }
@@ -69,14 +75,13 @@ h3{
     background-color: rgb(233, 226, 226);
 }
 
-form{
+#formain{
     text-align: center;
-    margin-left: 30%;
+    margin-left: 40%;
     margin-right: 30%;
     padding-bottom: 30px;
     border-color: rgb(56, 56, 56);
-    border-style:groove;
-    
+    border-style:groove;    
 }
 
 input{
@@ -87,11 +92,11 @@ input{
     width: 280px;
     padding: 20px;
     background-color: #E7F1F5;
-    border-radius: 10px;
-    
-    
+    border-radius: 10px;    
 }
-
+#infoextra li {
+    margin-top: 30px;
+}
 
 footer{
     text-align: center;
@@ -112,3 +117,42 @@ footer img{
 #infomain{
     width: 80%;
 }
+#imagen1{
+    width: 50%;
+    padding-right: 200px;
+    padding-left: 200px;
+    
+}
+#imagen1 td{
+    padding-right: 60px;
+    padding-top: 50px;
+}
+#imagen2{
+   width: 50%;
+}
+#imagen2 td{
+    padding-right: 60px;
+    padding-top: 50px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#registro{
+      margin-left: 40%;
+      border: #094660; 
+
+      
+     
+}
+#registro table{
+     border-color: rgb(4, 24, 24);
+}
+
+#contacto{
+    margin-left: 40%;   
+    }
+
+ 
