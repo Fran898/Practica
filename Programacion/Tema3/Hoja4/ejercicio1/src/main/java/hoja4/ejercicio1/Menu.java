@@ -33,12 +33,16 @@ public class Menu {
 
     public static void metodo2() {
         teclado = new Scanner(System.in);
-        int total = 0;
+        int total = 0, temp;
         System.out.println("Inserte el primer numero: ");
         int num1 = teclado.nextInt();
         System.out.println("Inserte el segundo numero: ");
         int num2 = teclado.nextInt();
-        for (; num1 != num2; num1++) {
+        temp = num1;
+        num1 = Math.min(num1, num2);
+        num2 = Math.max(temp, num2);
+        
+        for (; num1 != num2; num1++){
 
             if (num1 % 2 != 0) {
                 System.out.println(num1);
@@ -70,9 +74,10 @@ public class Menu {
         int num1 = teclado.nextInt();
         System.out.println("Inserte el segundo numero: ");
         int num2 = teclado.nextInt();
-        for (; num1 != 0 || num1 != 1; ) {
-
-            num1 -= num2;
+        int i = 0;
+        for (int resto = num1; resto >= 0; resto -=num2 ) {
+            
+            i++;
             
         }
         System.out.println(num1);

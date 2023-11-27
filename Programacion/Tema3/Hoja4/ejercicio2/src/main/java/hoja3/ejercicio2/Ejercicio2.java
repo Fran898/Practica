@@ -14,11 +14,11 @@ public class Ejercicio2 {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int total = 0;
+        int total = 0, i = 0;
        
         System.out.println("Inserte cuanto quiere donar: ");
         
-        for(; total < 600;){
+        for(; total < 600; i++){
             int dinero = teclado.nextInt();
             total += dinero;
             System.out.println("Dinero total reunido: " + total + "€");
@@ -26,7 +26,7 @@ public class Ejercicio2 {
         }
         
         
-       
+        System.out.println("Se han necesitado " + i + " para los " + total + "€");
         
         
         

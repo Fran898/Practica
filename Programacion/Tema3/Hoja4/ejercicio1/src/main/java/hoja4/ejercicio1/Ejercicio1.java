@@ -14,7 +14,7 @@ public class Ejercicio1 {
         //Menu.metodo1();
         //Menu.metodo2();
         //Menu.metodo3();
-        //Menu.metodo4();
+        Menu.metodo4();
         
         
         

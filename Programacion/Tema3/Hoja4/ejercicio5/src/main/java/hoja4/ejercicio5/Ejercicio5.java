@@ -16,7 +16,7 @@ public class Ejercicio5 {
         Random random = new Random();
         int num = random.nextInt(10-1+1)+1;
         int max = num, min = num;
-        for(int i = 0; i < 9; i++){
+        for(int i = 1; i <= 10; i++){
             num = random.nextInt(10-1+1)+1;
           
            if(max < num){

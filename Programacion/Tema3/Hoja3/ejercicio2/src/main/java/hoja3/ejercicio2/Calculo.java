@@ -69,9 +69,10 @@ public class Calculo {
 
         while (!texto.contains(".")) {
             texto = teclado.nextLine();
+            
         }
-
-        return texto.length();
+        int i = texto.indexOf(".");
+        return texto.substring(0, i).length();
 
     }
 
@@ -82,12 +83,12 @@ public class Calculo {
         do {
             System.out.println("Inserte la nota: ");
             num = teclado.nextInt();
-            if (num < 0) {
-                media = media;
-            } else {
+            if (num >= 0) {
                 media = (media + num);
                 i++;
-            }
+            } 
+                
+            
         } while (num >= 0);
 
         return media / i;
