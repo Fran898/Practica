@@ -24,20 +24,29 @@ public class Operaciones {
     }
 
     public int metodo1() {
-        String temp = Integer.toString(num);
 
-        return temp.length();
+        return (int) Math.log10(num) + 1;
 
     }
 
     public void metodo2() {
-        for (int i = 1; i != 11; i++) {
+        for (int i = 1; i < 11; i++) {
             System.out.println("\t" + num + " x " + i + " = " + num * i);
         }
 
     }
-    
-    public void metodo3(){
-        System.out.println("Todos los numeros son perfectos :D");
+
+    public void metodo3() {
+        int total = 0;
+        for (int i = 1; i < num; i++) {
+
+            if (num % i == 0) {
+                total += i;
+
+            }
+
+        }
+        boolean perf = total == num;
+        System.out.println(num + " es un numero perfecto: " + perf);
     }
 }

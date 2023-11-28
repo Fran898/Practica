@@ -20,7 +20,7 @@ public class Ejercicio7 {
              System.out.println("Inserta un numero: ");
             num = teclado.nextInt(); 
             op = new Operaciones (num);
-        for (;start;){      
+        while (start){      
             System.out.println("Selecciona una de las opcion: ");
             System.out.println("1.- Contar cuantas cifras tiene");
             System.out.println("2.- Sus 10 primeros múltiples");

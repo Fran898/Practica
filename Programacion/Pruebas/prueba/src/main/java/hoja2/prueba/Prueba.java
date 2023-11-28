@@ -3,6 +3,8 @@
  */
 package hoja2.prueba;
 
+import java.util.Scanner;
+
 /**
  *
  * @author dam1
@@ -10,18 +12,31 @@ package hoja2.prueba;
 public class Prueba {
 
     public static void main(String[] args) {
-        final int N = 200;
-        final int M = 400;
-
-        int x = (int) Math.floor(Math.random() * N);
-// x será un número entre 0 y N-1
-        int y = (int) Math.floor(Math.random() * N) + 1;
-// x será un número entre 1 y N
-        int z = (int) Math.floor(Math.random() * (M - N + 1)) + N;
-        
-//x será un número entre M y N ambos incluidos y siendo M mayor que N
-        System.out.println(x);
-        System.out.println(y);
-        System.out.println(z);
+        Scanner entrada = new Scanner(System.in);
+        int numAsteriscosLado;
+        System.out.print("Introduce el número de astericos por lado: ");
+        numAsteriscosLado = entrada.nextInt();
+//Dibujamos la parte de arriba del cuadrado
+        for (int cont = 0; numAsteriscosLado > cont; cont++) {
+            System.out.print("*");
+        }
+        System.out.println("");
+//Usamos un bucle anidado para dibujar los asteriscos del medio
+//Calcula las filas intermedias poniendo un * al inicio y final de llas.
+        for (int cont = 1; (numAsteriscosLado - 2) >= cont; cont++) {
+            System.out.print("*");
+//Este bucle dibuja los espacio entre el primer y ultimo asterisco
+//de cada una de las filas.
+            for (int i = 0; (numAsteriscosLado - 2) > i; i++) {
+                System.out.print(" ");
+            }
+            System.out.print("*");
+            System.out.println("");
+        }
+//Dibujamos la parte de abajo del cuadrado
+        for (int cont = 0; numAsteriscosLado > cont; cont++) {
+            System.out.print("*");
+        }
+        System.out.println("");
     }
 }
