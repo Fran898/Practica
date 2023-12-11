@@ -43,6 +43,7 @@ public class Tarjeta {
     }
 
     public void pagar(int importe, int pin, String descripcion, boolean propina) {
+        String des = descripcion.substring(0, 8);
         if (estado.equals(estado.HABILIDATA)) {
             if (this.pin == pin) {
                 if (dinero > importe) {
@@ -75,8 +76,13 @@ public class Tarjeta {
     
     private String imprimirTicket(){
         
+        String temp = Integer.toString(numcuenta);
+        String numero = temp.substring(0, 4);
+        for (int i = 0; i <= temp.substring(4).length(); i++) {
+            numero = numero.concat("*");
+        }
         
-        return "Titular: " + titular + "\nNumero de cuenta: " + numcuenta;
+        return "Titular: " + titular + "\nNumero de cuenta: " + numero + "\nDescripcion del producto: " +  ;
     }
     
 
