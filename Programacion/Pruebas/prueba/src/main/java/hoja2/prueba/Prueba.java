@@ -12,31 +12,14 @@ import java.util.Scanner;
 public class Prueba {
 
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int numAsteriscosLado;
-        System.out.print("Introduce el número de astericos por lado: ");
-        numAsteriscosLado = entrada.nextInt();
-//Dibujamos la parte de arriba del cuadrado
-        for (int cont = 0; numAsteriscosLado > cont; cont++) {
-            System.out.print("*");
-        }
-        System.out.println("");
-//Usamos un bucle anidado para dibujar los asteriscos del medio
-//Calcula las filas intermedias poniendo un * al inicio y final de llas.
-        for (int cont = 1; (numAsteriscosLado - 2) >= cont; cont++) {
-            System.out.print("*");
-//Este bucle dibuja los espacio entre el primer y ultimo asterisco
-//de cada una de las filas.
-            for (int i = 0; (numAsteriscosLado - 2) > i; i++) {
-                System.out.print(" ");
-            }
-            System.out.print("*");
-            System.out.println("");
-        }
-//Dibujamos la parte de abajo del cuadrado
-        for (int cont = 0; numAsteriscosLado > cont; cont++) {
-            System.out.print("*");
-        }
-        System.out.println("");
+        
+        int[] a = new int[10];
+        int[] b = new int[] {2,5,7,1};
+        a = b;
+
+       for(int i = 0; i < b.length; i++){
+           System.out.println(a[i]);
+       }
+       
     }
 }
