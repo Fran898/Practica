@@ -11,8 +11,12 @@ package hoja2.ejercicio3;
 public class Ejercicio3 {
 
     public static void main(String[] args) {
+        Invierno inv = new Invierno(5);
         
         
+        System.out.println(inv.mostrar(inv.getTemp()));
+        System.out.println(inv.mostrar(inv.fahrenheit()));
+
         
     }
 }

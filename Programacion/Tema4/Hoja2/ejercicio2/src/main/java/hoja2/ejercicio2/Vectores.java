@@ -11,13 +11,14 @@ import java.util.Scanner;
  * @author Francisco Sitjar
  */
 public class Vectores {
-    private Scanner teclado;
-    private int[] a = new int[5];
+    private int[] a;
     
     
     public Vectores(){
-        teclado = new Scanner(System.in);
+        Scanner teclado;
+        a = new int[5];        
         for(int i = 0; i < a.length; i++){
+            teclado = new Scanner(System.in);
             System.out.println("Inserte el valor de la posicion: " + i);
             a[i] = teclado.nextInt();
         }
@@ -26,9 +27,11 @@ public class Vectores {
     
     public int menor(){
         int temp = a[0];
-        for(int i = 0; i < a.length; i++){
-            if(a[i] < temp)
+        for(int i = 1; i < a.length; i++){
+            if(a[i] < temp){
                 temp = a[i];
+            }
+                
             
         }
         
@@ -40,9 +43,11 @@ public class Vectores {
     
        public int mayor(){
         int temp = a[0];
-        for(int i = 0; i < a.length; i++){
-            if(a[i] > temp)
-                temp = a[i];
+        for(int i = 1; i < a.length; i++){
+            if(a[i] > temp){
+                 temp = a[i];
+            }
+               
             
         }
         
@@ -52,7 +57,7 @@ public class Vectores {
     }
        
        
-        public int media(){
+        public double media(){
         int temp = 0;
         for(int i = 0; i < a.length; i++){
             temp += a[i];

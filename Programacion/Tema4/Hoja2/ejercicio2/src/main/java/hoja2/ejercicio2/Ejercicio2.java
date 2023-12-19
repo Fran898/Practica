@@ -14,9 +14,9 @@ public class Ejercicio2 {
         
         Vectores vec = new Vectores();
         
-        System.out.println(vec.mayor());
-        System.out.println(vec.menor());
-        System.out.println(vec.media());
+        System.out.println("El valor más pequeño es: " + vec.menor());
+        System.out.println("El valor más grande es: " + vec.mayor());
+        System.out.println("La media es: " + vec.media());
         
     }
 }

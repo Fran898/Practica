@@ -20,7 +20,7 @@ public class Invierno {
         temp = new double[n];
         for (int i = 0; i < temp.length; i++) {
             System.out.println("Inserte una temperatura");
-            temp[i] = teclado.nextInt();
+            temp[i] = teclado.nextDouble();
         }
     }
 
@@ -35,16 +35,28 @@ public class Invierno {
     }
     
     
-    public void fahrenheit(){
+    public double[] fahrenheit(){
         double[] fahr = new double[temp.length];
         for(int i = 0; i < fahr.length; i++){
             fahr[i] = temp[i]*1.8+32;
         }
         
-         for(int i = 0; i < fahr.length; i++){
-             System.out.println(fahr[i] + " ");
+        return fahr;
+        
+    }
+    
+    public String mostrar(double[] temp){
+        String cadena = "[ ";
+        for(int i = 0; i < temp.length; i++){
+            cadena += temp[i] + " ";
         }
         
+        cadena += " ]";
+        return cadena;
+    }
+
+    public double[] getTemp() {
+        return temp;
     }
 
 }

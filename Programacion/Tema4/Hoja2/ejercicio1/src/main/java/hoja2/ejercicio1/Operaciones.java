@@ -39,7 +39,7 @@ public class Operaciones {
     public int sumaPar(){
         int temp = 0;
         for(int i = 0; i < a.length; i++){
-            if(a[i]%2 == 0){
+            if(i%2 == 0 && i != 0){
                 temp += a[i];
             }
         }
