@@ -1,5 +1,5 @@
-<!ELEMENT marcadores (pagina)*>
-<!ELEMENT pagina (nombre, descripcion, url)>
-<!ELEMENT nombre (#PCDATA)>
-<!ELEMENT descripcion (#PCDATA)>
-<!ELEMENT url (#PCDATA)>
+<!ELEMENT nota (para, de, titulo, contenido)>
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT de (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT contenido (#PCDATA)>
