@@ -3,6 +3,14 @@
  */
 package hoja2.prueba;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.time.temporal.ChronoUnit;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -12,14 +20,10 @@ import java.util.Scanner;
 public class Prueba {
 
     public static void main(String[] args) {
-        
-        int[] a = new int[10];
-        int[] b = new int[] {2,5,7,1};
-        a = b;
+        LocalDateTime fechaConHora = LocalDateTime.now();
+        String idiomaLocal = System.getProperty("user.language");
+        String paisLocal = System.getProperty("user.country");
+        System.out.println("Formato actual del sistema (" + idiomaLocal + "-" + paisLocal + "): " + fechaConHora.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).withLocale(new Locale(idiomaLocal, paisLocal))));
 
-       for(int i = 0; i < b.length; i++){
-           System.out.println(a[i]);
-       }
-       
     }
 }
