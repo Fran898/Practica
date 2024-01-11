@@ -18,9 +18,9 @@ public class Articulo {
     public Articulo(){
         Scanner teclado = new Scanner(System.in);
         System.out.println("Inserte el codigo del articulo: ");
-        codigo = teclado.next();
+        codigo = teclado.nextLine();
         System.out.println("Inserte descripcion del producto:");
-        desc = teclado.next();
+        desc = teclado.nextLine();
         System.out.println("Inserte el numero de existencias: ");
         existencias = teclado.nextInt();
         

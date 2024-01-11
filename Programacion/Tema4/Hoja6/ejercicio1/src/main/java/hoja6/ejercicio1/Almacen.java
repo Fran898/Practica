@@ -13,10 +13,7 @@ public class Almacen {
     
     public Almacen(int n){
         producto = new Articulo[n];
-        for(int i = 0; i < n; i++){
-            producto[i] = new Articulo();
-        }
-        
+                
     }
     
     
