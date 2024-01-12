@@ -15,6 +15,10 @@ public class Cliente {
     private String apellidos;
     private int telefono;
     private double saldo;
+    
+    public Cliente(){
+        
+    }
 
     public int getCodigo() {
         return codigo;
