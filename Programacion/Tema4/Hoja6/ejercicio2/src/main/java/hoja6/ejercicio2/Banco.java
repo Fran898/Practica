@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Banco {
 
     private Cliente[] usuarios;
-    private int contador;
+    private static int contador;
 
     public Banco(int n) {
         contador = 0;

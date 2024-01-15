@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Francisco Sitjar
  */
 public class Agenda {
-    private int contador;
+    private static int contador;
     private Persona[] persona;
     
     public Agenda(int n){
@@ -46,11 +46,8 @@ public class Agenda {
     }
     
     
-    public String buscar(){
-        Scanner teclado = new Scanner(System.in);
+    public String buscar(String nombre){
         String temp = "La persona no existe";
-        System.out.println("Inserte el nombre de la persona: ");
-        String nombre = teclado.nextLine().toLowerCase();
         for (int i = 0; i < persona.length; i++) {
             if(nombre.equals(persona[i].getNombre().toLowerCase())){
                 temp = "Nombre: " + persona[i].getNombre() + "\nTelefono: " + persona[i].getTelefono() + "\n";
@@ -78,7 +75,7 @@ public class Agenda {
     }
 
     public int getContador() {
-        return contador++;
+        return contador;
     }
     
     

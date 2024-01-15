@@ -30,7 +30,10 @@ public class Ejercicio3 {
             switch (opc) {
                 case 1 -> ag.insertar();
                 case 2 -> System.out.println(ag.mostrar());
-                case 3 -> System.out.println(ag.buscar());
+                case 3 -> {System.out.println("Inserte el nombre de la persona: ");
+                           String nombre = teclado.next();
+                           System.out.println(ag.buscar(nombre));
+                }
                 case 4 -> System.out.println("Hay " + ag.getContador() + " personas en la agenda");
                 case 5 -> ag.modificar();
                 case 6 -> opc = 6;
