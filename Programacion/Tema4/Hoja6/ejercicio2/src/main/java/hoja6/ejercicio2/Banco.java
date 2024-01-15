@@ -27,9 +27,9 @@ public class Banco {
         usuarios[contador].setCodigo(contador + 1);
         System.out.println("Bienvenido usuario Nº" + (contador + 1));
         System.out.println("Inserte su nombre: ");
-        usuarios[contador].setNombre(teclado.nextLine());
+        usuarios[contador].setNombre(teclado.next());
         System.out.println("Inserte sus apellidos: ");
-        usuarios[contador].setApellidos(teclado.nextLine());
+        usuarios[contador].setApellidos(teclado.next());
         System.out.println("Inserte su numero de telefono: ");
         usuarios[contador].setTelefono(teclado.nextInt());
         System.out.println("Inserte su saldo inicial: ");
@@ -43,27 +43,29 @@ public class Banco {
         System.out.println("Inserte el numero de usuario: ");
         int n = teclado.nextInt();
         String temp = "No existe ese usuario";
-        for (int i = 0; i < n; i++) {
-            if (n == i) {
+        for (int i = 0; i <= usuarios.length-1; i++) {
+            if (n == usuarios[i].getCodigo()) {
                 temp = "Codigo de usuario Nº" + usuarios[i].getCodigo() + "\nNombre y apellidos: "
                         + usuarios[i].getNombre().concat(" ").concat(usuarios[i].getApellidos())
-                        + "\nTelefono: " + usuarios[i].getTelefono() + "\n Saldo: " + String.format("%,.2", usuarios[i].getSaldo());
+                        + "\nTelefono: " + usuarios[i].getTelefono() + "\n Saldo: " + String.format("%,.2f", usuarios[i].getSaldo());
             }
         }
         return temp;
     }
 
     public void eliminar(int n) {
-        if (n > usuarios.length) {
+        if (n <= usuarios.length-1) {
             for (int i = 0; i < n; i++) {
-                if (n == i) {
+                if (n == usuarios[i].getCodigo()) {
                     usuarios[i].setNombre(" ");
                     usuarios[i].setApellidos(" ");
                     usuarios[i].setCodigo(0);
                     usuarios[i].setSaldo(0);
                     usuarios[i].setTelefono(0);
+                    
                 }
             }
+            System.out.println("Usuario eliminado");
         }else{
             System.out.println("El usuario no existe");
         }

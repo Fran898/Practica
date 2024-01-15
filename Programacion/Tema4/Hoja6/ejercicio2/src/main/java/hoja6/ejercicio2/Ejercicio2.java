@@ -15,8 +15,7 @@ public class Ejercicio2 {
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        Banco van = new Banco(2);
-        van.ingresar();
+        Banco ban = new Banco(2);;
         
         int opc;
         do{
@@ -28,10 +27,14 @@ public class Ejercicio2 {
             System.out.println("5- Salir");
             opc = teclado.nextInt();
             switch(opc){
-                case 1 -> ;
-                case 2 -> ;
-                case 3 -> ;
-                case 4 -> ;
+                case 1 -> ban.ingresar();
+                case 2 -> System.out.println("Mostrar");
+                case 3 -> System.out.println(ban.buscar());
+                case 4 -> {
+                    System.out.println("Inserte el numero del usuario que desea eliminar: ");
+                    int temp = teclado.nextInt();
+                    ban.eliminar(temp);
+                }
                 case 5 -> opc = 5;
                 default -> System.out.println("Opcion no valida"); 
             }
@@ -39,7 +42,7 @@ public class Ejercicio2 {
             
         }while(opc != 5);
         
-        menu    
+        
         
     }
 }

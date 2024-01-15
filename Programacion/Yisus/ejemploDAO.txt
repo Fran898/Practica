@@ -1,0 +1,90 @@
+private Connection getConnection() {
+        return AccesoBaseDatos.getInstance().getConn();
+    }
+    
+    @Override
+    public Usuario porId(int id) {
+        Usuario usuario = null;
+        String sql = "SELECT id, username, password, email FROM usuarios WHERE id=?";
+        try ( PreparedStatement stmt = getConnection().prepareStatement(sql);) {
+            stmt.setInt(1, id);
+            try ( ResultSet rs = stmt.executeQuery();) {
+                if (rs.next()) {
+                    usuario = new Usuario( rs.getString("username"), rs.getString("password"), rs.getString("email"), rs.getInt("id"));
+                }
+            }
+
+        } catch (SQLException ex) {
+            // errores
+            System.out.println("SQLException: " + ex.getMessage());
+        }
+        return usuario;
+    }
+
+    @Override
+    public void guardar(Usuario t) {
+        String sql = null;
+        if (porId(t.getId()) != null) {
+            sql = "UPDATE usuarios SET username=?,password=? , email=? WHERE id=?";
+        } else {
+            sql = "INSERT INTO usuarios(username, password, email) VALUES (?, md5(?), ?)";
+        }
+        try ( PreparedStatement stmt = getConnection().prepareStatement(sql);) {
+
+            if (porId(t.getId())!=null) {
+                stmt.setInt(4, t.getId());
+            }
+            stmt.setString(1, t.getUsername());
+            stmt.setString(2, t.getPassword());
+            stmt.setString(3, t.getEmail());
+            int salida = stmt.executeUpdate();
+            if (salida != 1) {
+                throw new Exception(" No se ha insertado/modificado un solo registro");
+            }else{
+                System.out.println("Fila insertada: "+salida);
+            }
+
+        } catch (SQLException ex) {
+            // errores
+            System.out.println("SQLException: " + ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Override
+    public void eliminar(int id) {
+        String sql="DELETE FROM usuarios WHERE id=?";
+        try ( PreparedStatement stmt = getConnection().prepareStatement(sql);) {
+            stmt.setInt(1, id);
+            int salida = stmt.executeUpdate();
+            if (salida != 1) {
+                throw new Exception(" No se ha borrado un solo registro");
+            }
+        } catch (SQLException ex) {
+            // errores
+            System.out.println("SQLException: " + ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Override
+    public List<Usuario> listar() {
+        List<Usuario> usuarios = new ArrayList<>();
+        try(Statement st = getConnection().createStatement();
+                ResultSet rs = st.executeQuery("SELECT id, username, password, email FROM usuarios");){
+            while (rs.next()){
+                Usuario usuario = new Usuario(rs.getString("username"), rs.getString("password"), rs.getString("email"), rs.getInt("id"));
+                System.out.println("Listado");
+                if (!usuarios.add(usuario)) {
+                    throw new Exception("error no se ha insertado el usuario en la coleccion");
+                }
+            }
+        } catch (SQLException ex) {
+            System.out.println("SQLException: " + ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return usuarios;
+    }
