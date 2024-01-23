@@ -24,6 +24,9 @@ public class Prueba {
         String idiomaLocal = System.getProperty("user.language");
         String paisLocal = System.getProperty("user.country");
         System.out.println("Formato actual del sistema (" + idiomaLocal + "-" + paisLocal + "): " + fechaConHora.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).withLocale(new Locale(idiomaLocal, paisLocal))));
-
+     
     }
+    
+    
+   
 }
