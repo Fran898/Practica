@@ -25,7 +25,6 @@ public class Multiplicar {
     public void multiplica() {
         int temp = 1;
         for (int i = 1; i < matriz.length; i++) {
-            matriz[i][0] = i * temp;
             for (int j = 1; j < matriz[0].length; j++) {
                 matriz[i][j] = i * j;
 
@@ -56,12 +55,13 @@ public class Multiplicar {
         }
     }
     
-    public void tablaMultiplicar(int n){
+    public int[] tablaMultiplicar(int n){
+        int[] temp = new int[9];
         if(n <= matriz.length-1){
             for (int i = 1; i < matriz.length; i++) {
            if(n == matriz[0][i]){
                for (int j = 1; j < matriz[0].length; j++) {
-                   System.out.print(matriz[i][j] + " ");    
+                   temp[i] = matriz[i][j]; 
                }
            }
         }
@@ -69,6 +69,6 @@ public class Multiplicar {
             System.out.println("Numero no valido");
         }
         
-        
+        return temp;
     }
 }

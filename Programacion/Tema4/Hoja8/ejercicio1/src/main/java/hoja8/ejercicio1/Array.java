@@ -26,8 +26,9 @@ public class Array {
     }
 
     public void introducir() {
-        Scanner teclado = new Scanner(System.in);
+        Scanner teclado;
         for (int i = 0; i < vector.length; i++) {
+            teclado = new Scanner(System.in);
             System.out.println("Inserte el numero nº" + (i + 1) + ": ");
             vector[i] = teclado.nextInt();
         }
@@ -87,10 +88,9 @@ public class Array {
     }
 
     public void multiplos(int num) {
-        int temp = 1;
         for (int i = 0; i < vector.length; i++) {
-            vector[i] = num * temp;
-            temp++;
+            vector[i] = num * (i + 1);
+           
         }
     }
 

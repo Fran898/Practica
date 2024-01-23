@@ -29,7 +29,7 @@ public class Ejercicio3 {
             switch (opc) {
                 case 1 -> pais.addCiudad();
                 case 2 -> System.out.println(pais.masHab());
-                case 3 -> System.out.println("El pais existe: " + pais.existe());
+                case 3 -> System.out.println("El pais existe: " + pais.existe("palma"));
                 case 4 -> System.out.println("La media de los habitantes en todas las ciudades es: " + pais.mediaTotal());
                 case 5 -> System.out.println(pais.toString());
                 case 6 -> opc = 6;

@@ -21,6 +21,7 @@ public class Ciudad {
         this.hab = hab;
     }
     
+    
     @Override
     public String toString(){
         return "Ciudad: " + nombre + "\nHabitantes: " + hab;

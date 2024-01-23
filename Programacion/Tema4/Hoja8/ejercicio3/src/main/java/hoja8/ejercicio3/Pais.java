@@ -15,12 +15,13 @@ import java.util.Scanner;
 public class Pais {
     private String nombre;
     private Ciudad[] ciudad;
-    private int nciud;
+    private static int nciud;
         
     
     public Pais(String nombre){
-        ciudad = new Ciudad[2];
+        ciudad = new Ciudad[25];
         nciud = 0;
+        this.nombre = nombre;
     }
     
     public void addCiudad(){
@@ -42,25 +43,22 @@ public class Pais {
     }
     
     
-    public String masHab(){
-        Arrays.sort(ciudad,Comparator.comparing(Ciudad::getHab));
-        return "La ciudad con mas habitantes es: " + ciudad[(ciudad.length-1)].getNombre();
-       /* String temp = ciudad[0].getNombre();
-        for(int i = 1; i < ciudad.length; i++){
-            if(ciudad[i].getHab() >= ciudad[i-1].getHab()){
-                temp = ciudad[i].getNombre();
+    public Ciudad masHab(){
+        /*Arrays.sort(ciudad,Comparator.comparing(Ciudad::getHab));
+        return "La ciudad con mas habitantes es: " + ciudad[(ciudad.length-1)].getNombre();*/
+        Ciudad temp = ciudad[0];
+        for(int i = 1; i < nciud; i++){
+            if(ciudad[i].getHab() > temp.getHab()){
+                temp = ciudad[i];
             }
         }
-        return temp;*/
+        return temp;
     }
     
-    public boolean existe(){
-        Scanner teclado = new Scanner(System.in);
+    public boolean existe(String n){
         boolean temp = false;
-        System.out.println("Inserte el nombre de la ciudad: ");
-        String texto = teclado.nextLine();
-        for (int i = 0; i < ciudad.length; i++) {
-            if(texto.equalsIgnoreCase(ciudad[i].getNombre())){
+        for (int i = 0; i < nciud && !temp; i++) {
+            if(n.equalsIgnoreCase(ciudad[i].getNombre())){
                 temp = true;
             }
         }
@@ -69,18 +67,18 @@ public class Pais {
     
     public int mediaTotal(){
         int suma = 0;
-        for (Ciudad temp : ciudad) {
-            suma += temp.getHab();
+        for (int i = 0; i < nciud; i++) {
+            suma += ciudad[i].getHab();
         }
-        return suma/ciudad.length;
+        return suma/nciud;
     }
     
     @Override
     public String toString(){
         String texto = "";
-        for(Ciudad temp : ciudad){
-            texto += "Ciudad: " + temp.getNombre() + "\nHabitantes: " + temp.getHab() + "\nLongitud: " + temp.getLon() +
-            "\nLatitud: " + temp.getLat() + "\n-----------------------------------------\n";
+        for(int i = 0; i < nciud; i++){
+            texto += ciudad[i].toString() + "\nLongitud: " + ciudad[i].getLon() +
+            "\nLatitud: " + ciudad[i].getLat() + "\n-----------------------------------------\n";
         }
         return texto;
     }

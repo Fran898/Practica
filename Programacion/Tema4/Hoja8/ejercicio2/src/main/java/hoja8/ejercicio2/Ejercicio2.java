@@ -23,6 +23,6 @@ public class Ejercicio2 {
         m.valoresAspa();
         System.out.println("Inserte un numero del 1-9: ");
         int temp = teclado.nextInt();
-        m.tablaMultiplicar(temp);
+        System.out.println(m.tablaMultiplicar(temp));
     }
 }
