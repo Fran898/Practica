@@ -16,13 +16,12 @@ public class Articulo {
     protected double precio;
     
     public Articulo(){
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Inserta el codigo del producto:");
-        codigo = teclado.nextLine();
-        System.out.println("Inserta una descripcion:");
-        desc = teclado.nextLine();
-        System.out.println("Inserta el precio: ");
-        precio = teclado.nextDouble();
+        
+    }
+    public Articulo(String codigo, String desc, double precio){
+        this.codigo = codigo;
+        this.desc = desc;
+        this.precio = precio;
         
         
         
@@ -33,6 +32,12 @@ public class Articulo {
     public String toString(){
         return "Codigo del producto: " + codigo + "\nDescripcion: " + desc + "\nPrecio: " + String.format("%,.2f", precio);
     }
+
+    public double getPrecio() {
+        return precio;
+    }
+    
+    
     
     
     

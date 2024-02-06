@@ -11,16 +11,20 @@ import java.util.Scanner;
  * @author Francisco Sitjar
  */
 public class EnPromocion extends Articulo {
-    private int descuento;
+    private double descuento;
     
     public EnPromocion(){
-        super();
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Inserta el % de descuento: ");
-        descuento = teclado.nextInt();
+        
+    }
+    public EnPromocion(String codigo, String desc, double precio, double descuento){
+        super(codigo, desc, precio);
+        this.descuento = descuento;
         
     }
     
-    
+    public double precioDes(){
+        return (precio/descuento)*100;
+        
+    }
     
 }

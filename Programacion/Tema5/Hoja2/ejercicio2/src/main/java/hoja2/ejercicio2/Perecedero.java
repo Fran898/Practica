@@ -5,8 +5,6 @@
 package hoja2.ejercicio2;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
 
 /**
  *
@@ -17,12 +15,12 @@ public class Perecedero extends Articulo{
     
     
     public Perecedero(){
-        super();
-        Scanner teclado = new Scanner(System.in);
-        System.out.println("Inserta el mes y año de caducidad");
-        DateTimeFormatter f = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        caducidad = LocalDate.parse("01-"+teclado.nextLine(),f);
-        System.out.println(caducidad.format(f));
+        
+    }
+    public Perecedero(String codigo, String desc, double precio, int mes, int anno){
+        super(codigo, desc, precio);
+        caducidad = LocalDate.of(anno, mes, 01);
+       
         
     }
     
