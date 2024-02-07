@@ -22,9 +22,9 @@ public class Ejercicio1 {
      
         for (int i = 0; i < p.length; i++) {
             System.out.println("Inserte el titulo: ");
-            String titulo = teclado.nextLine();
+            String titulo = teclado.next();
             System.out.println("Inserte el nombre del autor: ");
-            String autor = teclado.nextLine();
+            String autor = teclado.next();
             System.out.println("Inserte el dia: ");
             int dia = teclado.nextInt();
             System.out.println("Inserte el mes: ");
