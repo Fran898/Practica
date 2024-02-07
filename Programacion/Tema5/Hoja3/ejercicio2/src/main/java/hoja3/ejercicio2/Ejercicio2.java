@@ -11,8 +11,12 @@ package hoja3.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        
-        
+        Alumno al = new Alumno(2);
+        al.agregarNota();
+        System.out.println(al.mostrar());
+        Profesor p = new Profesor(2);
+        p.agregarAsignatura();
+        System.out.println(p.mostrar());
         
     }
 }
