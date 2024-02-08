@@ -21,7 +21,7 @@ public abstract class Publicacion {
         this.titulo = titulo;
         this.autor = autor;
         fecha = Calendar.getInstance();
-        fecha.set(anno, mes, dia);
+        fecha.set(anno, (mes-1), dia);
         
         
     }

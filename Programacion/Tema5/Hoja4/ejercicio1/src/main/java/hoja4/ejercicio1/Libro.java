@@ -23,8 +23,8 @@ public class Libro extends Publicacion {
     
     @Override
     public String toString(){
-        DateFormat f = new SimpleDateFormat("dd/MM/yy");
-        return "Titulo: " + titulo + "\nAutor: " + autor + "\nFecha: " + f.format(fecha) + "\nNumero de paginas: " + numPaginas;
+        DateFormat f = new SimpleDateFormat("dd/M/yy");
+        return "Titulo: " + titulo + "\nAutor: " + autor + "\nFecha: " + f.format(fecha.getTime()) + "\nNumero de paginas: " + numPaginas;
     }
 
     public int getNumPaginas() {

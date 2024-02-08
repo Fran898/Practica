@@ -24,7 +24,7 @@ public class Disco extends Publicacion{
     @Override
     public String toString(){
         DateFormat f = new SimpleDateFormat("dd/MM/yy");
-        return "Titulo: " + titulo + "\nAutor: " + autor + "\nFecha: " + f.format(fecha) + "\nDuracion en minutos: " + duracionMinutos;
+        return "Titulo: " + titulo + "\nAutor: " + autor + "\nFecha: " + f.format(fecha.getTime()) + "\nDuracion en minutos: " + duracionMinutos;
     }
 
     public int getDuracionMinutos() {
