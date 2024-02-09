@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Disabled;
 
 /**
  *
@@ -97,7 +96,7 @@ public class CarritoTest {
     public void testGetProductos() {
         System.out.println("getProductos");
         Carrito instance = cart1;
-        Producto[] expResult = null;
+        Producto[] expResult = cart1.getProductos();
         Producto[] result = instance.getProductos();
         assertArrayEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
