@@ -11,8 +11,12 @@ package hoja2.ejercicio3;
 public abstract class Forma {
     public String id;
     
+    
+    
+    
     @Override
     public abstract String toString();
+    
     
     public String getId(){
         return id;

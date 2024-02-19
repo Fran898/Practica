@@ -11,8 +11,8 @@ package hoja3.ejercicio1;
 public class Ejercicio1 {
 
     public static void main(String[] args) {
-        Cono cono = new Cono(6,10);
-        Cilindro cil = new Cilindro(7,24);
+        Cono cono = new Cono(5,10);
+        Cilindro cil = new Cilindro(7,15);
         
         System.out.println("Cono area: " + cono.area());
         System.out.println("Cono volumen: " + cono.volumen());
