@@ -8,7 +8,7 @@ package ud4.carritocompra;
  *
  * @author cic
  */
-public class Producto {
+public class Producto { 
     private String codigo;
     private String nombre;
     private String descripcion;
