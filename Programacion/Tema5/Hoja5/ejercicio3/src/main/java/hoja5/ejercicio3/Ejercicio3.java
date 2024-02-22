@@ -4,6 +4,8 @@
 
 package hoja5.ejercicio3;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Francisco Sitjar
@@ -21,7 +23,13 @@ public class Ejercicio3 {
         
         System.out.println(a.toString());
         
+        Arrays.sort(a.contactos);
         
+        System.out.println(a.toString());
         
+       
+        a.eliminar("Alvaro");
+        
+        System.out.println(a.toString());
     }
 }

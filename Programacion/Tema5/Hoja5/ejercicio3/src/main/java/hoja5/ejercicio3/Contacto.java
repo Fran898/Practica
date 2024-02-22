@@ -5,28 +5,28 @@
 package hoja5.ejercicio3;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 /**
  *
  * @author Francisco Sitjar
  */
-public class Contacto {
+public class Contacto implements Comparable<Contacto> {
+
     private String nombre;
     private String apellido;
     private int telefono;
     private String email;
     private LocalDate fechaNac;
-    
-    public Contacto(String nom, String ap, int tel, String email, int dia, int mes, int anno){
+
+    public Contacto(String nom, String ap, int tel, String email, int dia, int mes, int anno) {
         nombre = nom;
         apellido = ap;
         telefono = tel;
         this.email = email;
-        DateTimeFormatter f = DateTimeFormatter.ofPattern("dd-mm-yyyy");
+
         fechaNac = LocalDate.of(anno, mes, dia);
         //Cambiar la salida de la fecha
-        
+
     }
 
     public String getNombre() {
@@ -48,8 +48,26 @@ public class Contacto {
     public LocalDate getFechaNac() {
         return fechaNac;
     }
-    
-    
-    
-    
+
+    @Override
+    public int compareTo(Contacto other) {
+        int temp = 0;
+        if (nombre.compareTo(other.nombre) > 0) {
+            temp = 1;
+            
+        } else if (nombre.compareTo(other.nombre) < 0) {
+            temp = -1;
+            
+        } else {
+            temp = 0;
+        }
+
+        return temp;
+    }
+
 }
+    
+    
+    
+    
+

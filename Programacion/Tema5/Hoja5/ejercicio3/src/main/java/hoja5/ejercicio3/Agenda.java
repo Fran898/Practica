@@ -4,6 +4,8 @@
  */
 package hoja5.ejercicio3;
 
+import java.time.format.DateTimeFormatter;
+
 /**
  *
  * @author Francisco Sitjar
@@ -24,6 +26,7 @@ public class Agenda {
         } else {
             System.out.println("La agenda esta completa");
         }
+        contador++;
     }
 
     public void buscar(Contacto c) {
@@ -34,13 +37,14 @@ public class Agenda {
         }
     }
 
-    public void eliminar(Contacto c) {
+    public void eliminar(String n) {
         for (int i = 0; i < contador; i++) {
-            if (c.equals(contactos[i])) {
-                    for (int j = contador; j > i ; j--) {
-                    contactos[i] = contactos[i+1];
+            if (contactos[i].getNombre().equalsIgnoreCase(n)) {
+                    for (int j = i+1; j < contador ; j++) {
+                    contactos[j-1] = contactos[j];
                     
                 }
+                    System.out.println("Contacto eliminado");
             }
         }
     }
@@ -48,8 +52,10 @@ public class Agenda {
     @Override
     public String toString(){
         String temp = "";
+         DateTimeFormatter f = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         for (int i = 0; i < contador; i++) {
-            temp = "Nombre: " + contactos[i].getNombre() + "\nApellido: " + contactos[i].getApellido() + "\nTelefono: " + contactos[i].getTelefono() + "\nFecha de Nacimiento: " + contactos[i].getFechaNac() + "\n";
+            temp += "Nombre: " + contactos[i].getNombre() + "\nApellido: " + contactos[i].getApellido() +
+                    "\nTelefono: " + contactos[i].getTelefono() + "\nFecha de Nacimiento: " + contactos[i].getFechaNac().format(f) + "\n---------------\n";
         }
         return temp;
     }
