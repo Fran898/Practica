@@ -19,13 +19,16 @@ public class Ejercicio5 {
         int num1 = new Scanner(System.in).nextInt();
         System.out.println("Inserte el divisor: ");
         int num2 = new Scanner(System.in).nextInt();
-        try{
+        /*try{
             System.out.println("El resultado de la division es: " + dividir(num1,num2));
         }catch(ArithmeticException e){
             System.out.println("Error, operacion no valida");
         }catch (InputMismatchException e) {
             System.out.println("El dato introducido es incorrecto");
         }
+        */
+        System.out.println("El resultado de la division es: " + dividir2(num1,num2));
+        
         
        
         
@@ -35,5 +38,17 @@ public class Ejercicio5 {
      public static int dividir(int num1, int num2) throws ArithmeticException{
             return num1/num2;
             
+        }
+     
+     public static int dividir2(int num1, int num2){
+         int temp = 0;
+            try{
+                temp = num1/num2;
+                
+            }catch(ArithmeticException e){
+                System.out.println("Operacion no valida");
+            }
+            return temp;
+           
         }
 }
