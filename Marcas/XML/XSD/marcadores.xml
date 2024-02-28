@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<marcadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marcadores.xsd">
+<fichas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marcadores.xsd">
    <ficha numero="1">
-      <nombre>Ana Sanz Tin</nombre>
-      <edad>22</edad>
+      <nombre>Eva</nombre>
+      <edad>25</edad>
+      <ciudad>París</ciudad>
+      <pais>Francia</pais>
+      <telefono>999888777</telefono>
    </ficha>
    <ficha numero="2">
-      <nombre>Iker Rubio Mol</nombre>
-      <edad>23</edad>
+      <nombre>Giovanni</nombre>
+      <edad>26</edad>
+      <ciudad>Florencia</ciudad>
+      <pais>Italia</pais>
+      <telefono>111222333</telefono>
    </ficha>
-</marcadores>
+</fichas>
