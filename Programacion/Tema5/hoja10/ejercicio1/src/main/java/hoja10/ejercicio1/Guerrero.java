@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
  *
  * @author DAM114
  */
-public abstract class Guerrero {
+public abstract class Guerrero implements Comparable<Guerrero> {
 
     private final String nombre;
     private int edad;
@@ -64,6 +64,19 @@ public abstract class Guerrero {
     
     public abstract boolean retirarse();
     
+    
+    @Override
+    public int compareTo(Guerrero g){
+        int aux;
+        if(this.fuerza == g.getFuerza()){
+            aux = 0;
+        }else if(this.fuerza > g.getFuerza()){
+            aux = 1;
+        }else{
+            aux = -1;
+        }
+        return aux;
+    }
     
 
     public void setEdad(int edad) {
