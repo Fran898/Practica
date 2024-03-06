@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="estilo-articulos.css"?>
-<libros>
-   <libro titulo="El camino de los reyes" anno="2010" autor="Brandon Sanderson"/>
-   <libro titulo="Palabras radiantes" anno="2014" autor="Brandon Sanderson"/> 
-   <libro titulo="Juramentada" anno="2017" autor="Brandon Sanderson"/>
-</libros>

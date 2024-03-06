@@ -19,31 +19,44 @@ public class Caballo implements PuedeMontarse{
     private Guerrero[] ocupantes;
 
     public Caballo(Guerrero[] g) {
-        int i = 0;
-        if (g[i] instanceof Griego) {
-            ocupantes = new Guerrero[g.length];
-            for (; i < g.length; i++) {
-                ocupantes[i] = g[i];
-                
-
+        boolean comprueba = true;
+        for (int i = 0; i < g.length && comprueba==true; i++) {
+            if (!(g[i] instanceof Griego)) {
+               comprueba = false;
             }
-            ocupacion = i;
-            capacidad = i;
-        }else{
-            capacidad = 100;
+        }
+        if (comprueba == false) {
+            this.capacidad = 100;
+            this.ocupantes = new Guerrero[100];
+            this.ocupacion = 0;
+        } else {
+            this.capacidad = g.length;
+            this.ocupantes = new Guerrero[g.length];
+            for (int i = 0; i < g.length; i++) {
+                this.ocupantes[i] = g[i];
+                ocupacion++;
+            }
         }
     }
     
     
     public Caballo(Guerrero g, int c){
-         capacidad = c;
-         ocupantes = new Guerrero[c];
-         if(g instanceof Griego){
-             ocupantes[0] = g;
-             ocupacion = 1;
-         }else{
-             ocupacion = 0;
-         }
+         boolean comprueba = true;
+        if (!(g instanceof Griego)) {
+            comprueba = false;
+        }
+        if (comprueba == false) {
+            System.out.println("No se ha podido añadir el guerrero");
+            this.capacidad = 100;
+            this.ocupantes = new Guerrero[100];
+            this.ocupacion = 0;
+        } else {
+            this.capacidad = c;
+            this.ocupantes = new Guerrero[c];
+            this.ocupantes[0] = g;
+            System.out.println("Guerrero añadido con exito");
+            ocupacion++;
+        }
          
     }
     
@@ -61,7 +74,7 @@ public class Caballo implements PuedeMontarse{
             
             
         }*/
-        Arrays.sort(ocupantes);
+        Arrays.sort(ocupantes, 0, ocupacion);
         
         
         

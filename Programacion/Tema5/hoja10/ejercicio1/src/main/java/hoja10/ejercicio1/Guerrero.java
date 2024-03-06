@@ -66,14 +66,14 @@ public abstract class Guerrero implements Comparable<Guerrero> {
     
     
     @Override
-    public int compareTo(Guerrero g){
+    public int compareTo(Guerrero guerrero) {
         int aux;
-        if(this.fuerza == g.getFuerza()){
+        if (this.fuerza == guerrero.getFuerza()) {
             aux = 0;
-        }else if(this.fuerza > g.getFuerza()){
-            aux = 1;
-        }else{
+        } else if (this.fuerza < guerrero.getFuerza()) {
             aux = -1;
+        } else {
+            aux = 1;
         }
         return aux;
     }

@@ -1,0 +1,3 @@
+ <!ELEMENT articulos (articulo)+>
+   <!ELEMENT articulo (#PCDATA)>
+      <!ATTLIST articulo color CDATA #FIXED "rojo">

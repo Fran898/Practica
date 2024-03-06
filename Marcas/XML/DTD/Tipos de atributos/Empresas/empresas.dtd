@@ -1,0 +1,4 @@
+<!ELEMENT empresas (empresa)*>
+   <!ELEMENT empresa EMPTY>
+      <!ATTLIST empresa nombre CDATA #REQUIRED>
+      <!ATTLIST empresa fecha_de_fundacion CDATA #IMPLIED>

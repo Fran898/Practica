@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<fichas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marcadores.xsd">
-   <ficha numero="1">
-      <nombre>Eva</nombre>
-      <edad>25</edad>
-      <ciudad>París</ciudad>
-      <pais>Francia</pais>
-      <telefono>999888777</telefono>
-   </ficha>
-   <ficha numero="2">
-      <nombre>Giovanni</nombre>
-      <edad>26</edad>
-      <ciudad>Florencia</ciudad>
-      <pais>Italia</pais>
-      <telefono>111222333</telefono>
-   </ficha>
-</fichas>
+<marcadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="marcadores.xsd">
+   <pagina>
+      <nombre>Abrirllave</nombre>
+      <descripcion>Tutoriales de informática.</descripcion>
+      <url>http://www.abrirllave.com/</url>
+   </pagina>
+   <pagina>
+      <nombre>Wikipedia</nombre>
+      <descripcion>La enciclopedia libre.</descripcion>
+      <url>http://www.wikipedia.org/</url>
+   </pagina>
+   <pagina>
+      <nombre>W3C</nombre>
+      <descripcion>World Wide Web Consortium.</descripcion>
+      <url>http://www.w3.org/</url>
+   </pagina>
+</marcadores>

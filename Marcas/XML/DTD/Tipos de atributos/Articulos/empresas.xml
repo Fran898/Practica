@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nota SYSTEM "articulos.dtd">
+
+<articulos>
+   <articulo color="rojo">bolígrafo</articulo>
+   <articulo>cuaderno</articulo>
+   <articulo color="rojo">rotulador</articulo>
+</articulos>

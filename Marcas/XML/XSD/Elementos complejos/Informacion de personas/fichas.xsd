@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="marcadores">
+  <xs:element name="personas">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="pagina" maxOccurs="unbounded">
-          <xs:complexType>
+        <xs:element name="persona" maxOccurs="unbounded">
+          <xs:complexType mixed="true">
             <xs:sequence>
               <xs:element name="nombre" type="xs:string"/>
-              <xs:element name="descripcion" type="xs:string"/>
-              <xs:element name="url" type="xs:string"/>
-             </xs:sequence>
+              <xs:element name="ciudad" type="xs:string"/>
+              <xs:element name="edad" type="xs:positiveInteger"/>
+            </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:sequence>

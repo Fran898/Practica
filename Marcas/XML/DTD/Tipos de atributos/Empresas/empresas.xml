@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nota SYSTEM "empresas.dtd">
+
+<empresas>
+   <empresa nombre="Apple" fecha_de_fundacion="1976"/>
+   <empresa nombre="Google"/>
+   <empresa nombre="Microsoft" fecha_de_fundacion="1975"/>
+</empresas>
