@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  * @author Francisco Sitjar
  */
-public class Contenedor<T> implements Pila{
+public class Contenedor<T> implements Pila<T>{
 
     private T[] objeto;
 
@@ -19,7 +19,18 @@ public class Contenedor<T> implements Pila{
 
     }
 
-   
+  public void insertarAlPrincipio(T nuevo) {
+       
+        if (objeto != null) {
+            objeto = Arrays.copyOf(objeto,(objeto.length +1));
+            System.arraycopy(objeto, 0, objeto, 1,objeto.length-1);
+            objeto[0] = nuevo;
+
+        }else{
+            objeto[0] = nuevo;
+        }
+
+    }
 
     public void insertarAlFinal(T nuevo) {
         if (objeto[objeto.length-1] != null) {
@@ -32,7 +43,6 @@ public class Contenedor<T> implements Pila{
 
     }
 
-    @Override
     public T extraerDelPrincipio() {
         T temp = objeto[0];
         
@@ -47,25 +57,29 @@ public class Contenedor<T> implements Pila{
     
     @Override
     public String toString(){
-        String temp = "";
-        for (T n: objeto) {
-            temp += n + " ";
-        }
         
-        
-        return temp;
+        return Arrays.deepToString(objeto);
     }
 
     @Override
-    public void insertarAlPrincipio(T nuevo) {
-        if (objeto[0] != null) {
-            objeto = Arrays.copyOf(objeto,(objeto.length +1));
-            System.arraycopy(objeto, 0, objeto, 1,objeto.length-1);
-            objeto[0] = nuevo;
+    public void insertar(T nuevo) {
+         if (objeto != null) {
+            objeto = Arrays.copyOf(objeto, objeto.length +1);
+            objeto[objeto.length-1] = nuevo;
 
         }else{
-            objeto[0] = nuevo;
+            objeto[objeto.length-1] = nuevo;
         }
+       
+    }
+
+    @Override
+    public T extraer() {
+        T temp = objeto[objeto.length-1];
+       
+        objeto = Arrays.copyOf(objeto, objeto.length -1);
+        return temp;
+        
     }
     
 
