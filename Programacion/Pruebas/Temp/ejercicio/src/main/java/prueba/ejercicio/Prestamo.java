@@ -26,6 +26,22 @@ public class Prestamo {
         
         
     }
+
+    public Libro getLibro() {
+        return libro;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public LocalDate getFechaPrestamo() {
+        return fechaPrestamo;
+    }
+
+    public LocalDate getFechaDevolucion() {
+        return fechaDevolucion;
+    }
     
     
     
