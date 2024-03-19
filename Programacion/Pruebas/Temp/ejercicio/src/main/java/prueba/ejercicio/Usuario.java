@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author Francisco Sitjar
  */
-public class Usuario {
+public class Usuario implements Identificable{
     private String nombre;
     private String apellido;
     
@@ -47,6 +47,9 @@ public class Usuario {
         return Objects.equals(this.apellido, other.apellido);
     }
     
-    
-    
+    @Override
+    public String imprime(){
+        return "Nombre: " + nombre + "\nApellido: " + apellido;
+        
+    }
 }

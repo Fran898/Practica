@@ -4,7 +4,11 @@
  */
 package prueba.ejercicio;
 
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.InputMismatchException;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -22,8 +26,7 @@ public class Teclado {
                 System.out.println("No hay valor");
                 throw new MiExcepcion("Error");
             }
-            
-            
+
         } catch (MiExcepcion e) {
             System.out.println("Error");
 
@@ -45,7 +48,53 @@ public class Teclado {
         return temp;
 
     }
-    
-    
+
+    public static int entero(String mensaje) {
+        System.out.println(mensaje);
+        int temp = 0;
+        try {
+            temp = new Scanner(System.in).nextInt();
+
+        } catch (InputMismatchException e) {
+            System.out.println("No es un numero entero");
+        }
+        return temp;
+
+    }
+
+    //Metodo estatico de validacion para fechas, (String mensaje, LocalDate fecha), introducir fecha de devolucion es valida
+    public static LocalDate validarFecha(String mensaje, LocalDate fecha) {
+        boolean valido = false;
+        LocalDate temp = LocalDate.now();
+        do {
+            System.out.println(mensaje);
+            int dia = entero("Inserte el dia");
+            int mes = entero("Inserte el mes");
+            int anno = entero("Inserte el año");
+            
+           
+            try {
+                temp = LocalDate.of(anno, mes, dia);
+                if (fecha.isAfter(temp)) {
+                    DateTimeFormatter f = DateTimeFormatter.ofPattern("dd 'de' MMMM 'de' ");
+                    String texto = "La fecha debe ser posterior a " + temp.format(f);
+                    throw new MiExcepcion(texto);
+                }
+                valido = true;
+                
+
+            } catch (DateTimeException e) {
+                System.out.println("Los datos introducidos no son correctos"+e.toString());
+
+            }catch (MiExcepcion e){
+                System.out.println(e.getMessage());
+            }
+            
+        }while(!valido);
+        
+        return temp;
+        
+        
+    }
 
 }

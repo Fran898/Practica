@@ -10,7 +10,7 @@ import java.time.LocalDate;
  *
  * @author Francisco Sitjar
  */
-public class Biblioteca {
+public class Biblioteca implements Identificable {
 
     private Libro[] libros;
     private Usuario[] usuarios;
@@ -119,6 +119,53 @@ public class Biblioteca {
             System.out.println("El libro no esta en la biblioteca");
         }
 
+    }
+
+    public void devolver(Libro l, Usuario u) {
+        boolean seguir = true;
+        for (int i = 0; i < prestamos.length && seguir; i++) {
+            if (prestamos[i] != null && prestamos[i].getUsuario().equals(u)) {
+                if (prestamos[i].getLibro().equals(l) && prestamos[i].getFechaDevolucion() == null) {
+                    seguir = false;
+                    prestamos[i].setFechaPrestamo(Teclado.validarFecha("Escribe la fechad e devolucion", prestamos[i].getFechaPrestamo()));
+                }
+            }
+
+        }
+        if (seguir) {
+            System.out.println("No se puede devolver el libro");
+        }
+
+    }
+
+    @Override
+    public String imprime() {
+        String texto = nombre + "\nLibros (";
+        for (int i = 0; i < contadorLibros; i++) {
+            texto += libros[i].imprime();
+        }
+        texto += ")\nUsuarios (";
+        boolean us = false;
+        for (int i = 0; i < usuarios.length && !us; i++) {
+            if (usuarios[i] != null) {
+                texto += usuarios[i].imprime();
+            } else {
+                us = true;
+            }
+
+        }
+        texto += ")\nPrestamos (";
+        boolean pr = false;
+        for (int i = 0; i < prestamos.length && !pr; i++) {
+            if (prestamos[i] != null) {
+                texto += prestamos[i].imprime();
+            } else {
+                pr = true;
+            }
+
+        }
+
+        return texto + ")";
     }
 
 }

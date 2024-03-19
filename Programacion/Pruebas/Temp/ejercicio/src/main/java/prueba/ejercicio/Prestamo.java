@@ -6,12 +6,13 @@ package prueba.ejercicio;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
  * @author Francisco Sitjar
  */
-public class Prestamo {
+public class Prestamo implements Identificable{
     private Libro libro;
     private Usuario usuario;
     private LocalDate fechaPrestamo;
@@ -25,6 +26,13 @@ public class Prestamo {
         fechaDevolucion = null;
         
         
+    }
+    
+    
+    @Override
+    public String imprime(){
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("dd 'de' MMMM 'de' ");
+        return "Libro: " + libro + "\nUsuario: " + usuario + "\nFecha del prestamos: " + fechaPrestamo.format(f) + "\nFecha de devolucion " + fechaDevolucion.format(f);
     }
 
     public Libro getLibro() {
@@ -41,6 +49,22 @@ public class Prestamo {
 
     public LocalDate getFechaDevolucion() {
         return fechaDevolucion;
+    }
+
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public void setFechaPrestamo(LocalDate fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
+    }
+
+    public void setFechaDevolucion(LocalDate fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
     }
     
     

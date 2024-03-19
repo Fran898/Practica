@@ -3,6 +3,8 @@
  */
 package prueba.ejercicio;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author Francisco Sitjar
@@ -10,7 +12,7 @@ package prueba.ejercicio;
 public class Ejercicio {
 
     public static void main(String[] args) {
-        Usuario usu1 = new Usuario("Fran", "Sitjar");
+        /*Usuario usu1 = new Usuario("Fran", "Sitjar");
         Usuario usu2 = new Usuario("Fran", "Sitjar");
 
         if (usu1.equals(usu2)) {
@@ -23,6 +25,9 @@ public class Ejercicio {
         
         LibroElectronico l1 = new LibroElectronico("Adios", "Bonifacio", 2.4f);
         LibroElectronico l2 = new LibroElectronico();
+        */
+        Biblioteca b = new Biblioteca("No", 3);
+        System.out.println(b.imprime());
         
 
     }
