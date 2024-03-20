@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package hoja1.ejercicio1;
+package hoja1.ejercicio2;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
@@ -11,11 +11,11 @@ import java.util.Scanner;
 
 /**
  *
- * @author DAM114
+ * @author Francisco Sitjar
  */
 public class Teclado {
     
-    
+    //Hacer loop si se necesita seguir preguntando (como un constructor)
     public static String string(String texto) {
         System.out.println(texto);
         return new Scanner(System.in).nextLine();
@@ -83,4 +83,6 @@ public class Teclado {
         }
         return temp;
     }
+    
+    
 }

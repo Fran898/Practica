@@ -125,9 +125,9 @@ INTRO DNI
         return valido;
     }
     
-    public static String introDni (){
+    public static String dni(){
         boolean valido=false;
-        String aux="";
+        String temp="";
         while (!valido){
             aux=string("Introduce el DNI: ");
             if (aux.matches("[0-9]{8}[A-Z]") && letraDni(aux)){
@@ -136,7 +136,7 @@ INTRO DNI
                 System.out.println("DNI introducido invalido, vuelve a introducirlo");
             }
         }
-        return aux;
+        return temp;
         
     }
 
