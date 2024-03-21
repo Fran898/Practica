@@ -4,6 +4,8 @@
 
 package hoja1.ejercicio2;
 
+import java.util.Collections;
+
 /**
  *
  * @author Francisco Sitjar
@@ -11,7 +13,18 @@ package hoja1.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        String n = "0-asd486";
-        System.out.println(n.matches("[a-zA-Z0-9]{3,}"));
+        Asociacion a = new Asociacion();
+        int temp = Integer.parseInt(args[0]);
+        for (int i = 0; i < temp; i++) {
+            Persona p = new Persona();
+            a.insertar(p);
+        }
+        
+        System.out.println(a.buscar(Teclado.string("Inserta un DNI: ")));
+        System.out.println(a.todo());
+        
+        Collections.sort(a.getPersonas(), (o1, o2) -> o1.getNombre().compareTo(o2.getNombre()));
+        
+        System.out.println(a.todo());
     }
 }
