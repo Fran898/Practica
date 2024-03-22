@@ -71,13 +71,13 @@ public class Teclado {
     }
     
     public static LocalDate fecha(String texto) {
-        System.out.print(texto);
+        System.out.println(texto);
         int dia = entero("Introduce el dia: ");
         int mes = entero("Introduce el mes: ");
-        int anio = entero("Introduce el año: ");
+        int anno = entero("Introduce el año: ");
         LocalDate temp = LocalDate.now();
         try {
-            temp = LocalDate.of(dia, mes, anio);
+            temp = LocalDate.of(anno, mes, dia);
         } catch (DateTimeException a) {
             System.out.println("Error: Los datos no son validos para el formato de fecha");
         }
