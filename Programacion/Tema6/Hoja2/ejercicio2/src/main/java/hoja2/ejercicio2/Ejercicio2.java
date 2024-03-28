@@ -4,6 +4,9 @@
 
 package hoja2.ejercicio2;
 
+import java.time.LocalDateTime;
+
+
 /**
  *
  * @author Francisco Sitjar
@@ -11,6 +14,22 @@ package hoja2.ejercicio2;
 public class Ejercicio2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        FichaVehiculo v1 = new FichaVehiculo(LocalDateTime.now(), "Toyota", "AB1");
+        FichaVehiculo v2 = new FichaVehiculo(LocalDateTime.now(), "Opel", "AB2");
+        FichaVehiculo v3 = new FichaVehiculo(LocalDateTime.now(), "Honda", "AB3");
+        Taller t = new Taller();
+        
+        t.insertarVehiculo(v1);
+        t.insertarVehiculo(v2);
+        t.insertarVehiculo(v3);
+        
+        t.repararVehiculo("AB2");
+        
+        t.darSalidaVehiculo("AB3");
+        
+        System.out.println(t.mostrarTodo());
     }
+    
+    
+    
 }
